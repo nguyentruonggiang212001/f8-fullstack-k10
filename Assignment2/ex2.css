@@ -1,0 +1,21 @@
+.Adjust-text-color{
+    height:150px ;
+    width: 100%;
+    color: yellow;
+    line-height: 150px;
+    text-align: left;
+    padding-left: 50px;
+  
+}
+.text-color{
+    color: red;
+}
+.adjust-text-color{
+    color: rgb(1, 1, 136)
+}
+.background{
+    background-color: blue;
+}
+.Edit-color-icon{
+    color: rgb(1, 1, 136)
+}
