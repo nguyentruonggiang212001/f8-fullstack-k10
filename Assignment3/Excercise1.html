@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .form-sign {
+      background-color: #ccc;
+      width: 700px;
+      border-radius: 4px;
+      padding: 10px;
+    }
+    input {
+      margin-top: 10px;
+      width: 87%;
+      padding: 6px;
+    }
+    button {
+      width: 195%;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: rgb(37, 142, 37);
+      color: white;
+      border-radius: 2px;
+      align-items: center;
+      border: none;
+    }
+    select {
+      width: 92%;
+      padding: 6px;
+    }
+    .optional {
+      color: #666;
+    }
+    .adjust-text {
+      width: 500px;
+    }
+  </style>
+  <body>
+    <form class="form-sign">
+      <h1>Try a free sample</h1>
+      <p class="adjust-text">
+        Sign up to get a coupon you can redeem at your nearest Dancing Goat cafe
+        for a sample of the Colombia Carlos Imbachi coffee. We'll also make sure
+        you don't miss out on news introducing the new coffees that we add to
+        our store regularly.
+      </p>
+      <table width="100%" border="0">
+        <tr>
+          <td>
+            <label for="firstname"><b>First name</b></label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="John"
+            />
+          </td>
+          <td>
+            <label for="lastname"><b>Last name</b></label>
+            <input
+              type="text"
+              id="last-name"
+              name="lastname"
+              placeholder="Smith"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email"><b>Email address</b></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+            />
+          </td>
+          <td>
+            <label for="address"><b>Address</b></label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Silk St"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="city"><b>City</b></label>
+            <input type="text" id="city" name="city" placeholder="London" />
+          </td>
+          <td>
+            <label for="optional">
+              <b>State</b> <span class="optional">(optional)</span>
+              <input type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ZIP"><b>ZIP code</b></label>
+            <input type="text" id="ZIP" name="ZIP" placeholder="EC2Y8DS" />
+          </td>
+          <td>
+            <label for="country"><b> Country</b></label>
+            <select name="country" id="country">
+              <option value="0">United Kingdom</option>
+              <option value="1">Korea</option>
+              <option value="2">Thai Land</option>
+              <option value="3">Viet Nam</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button class="button"><b>SEND ME FREE COFFEE</b></button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
