@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      font-style: italic;
+      width: 600px;
+      display: flex;
+    }
+    blockquote {
+      padding: 20px;
+    }
+    .quote-icon-left,
+    .quote-icon-right {
+      background-color: #ddd;
+      border-radius: 50%;
+      text-align: center;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      font-size: 3rem;
+    }
+    .quote-icon-right {
+      margin-top: 80px;
+      right: 960px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- Biểu tượng dấu ngoặc kép trái -->
+      <div class="quote-icon-left">
+        <span>&ldquo;</span>
+      </div>
+      <!-- Đoạn trích dẫn -->
+      <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </blockquote>
+      <!-- Biểu tượng dấu ngoặc kép phải -->
+      <div class="quote-icon-right">
+        <span>&rdquo;</span>
+      </div>
+    </div>
+  </body>
+</html>

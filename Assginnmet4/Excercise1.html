@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .banner {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 7px;
+        width: 600px;
+      }
+      .banner p {
+        margin: 0 0 20px;
+        line-height: 1.5;
+      }
+      input[type="email"] {
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        width: 250px;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        background-color: #f1c40f;
+        color: #333;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 3px;
+      }
+      button:hover {
+        background-color: #f39c12;
+        color: #fff;
+      }
+      span {
+        color: #f39c12;
+      }
+      .banner:hover input {
+        background-color: #ddd;
+      }
+      .banner:hover input::placeholder {
+        color: #f1c40f;
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="banner">
+        <!-- Tiêu đề chính của biểu ngữ -->
+        <h2><span>Earn income</span> with your CSS skills</h2>
+        <!-- Đoạn văn mô tả về dịch vụ -->
+        <p>
+          Sign up and we'll send you the best freelance opportunities straight
+          to your inbox.<br />We're building the largest self-service
+          freelancing marketplace for people like you.
+        </p>
+        <!-- Biểu mẫu đăng ký email -->
+        <form>
+          <input type="email" name="email" placeholder="Email address" />
+          <button type="submit">Send Me Opportunities</button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
