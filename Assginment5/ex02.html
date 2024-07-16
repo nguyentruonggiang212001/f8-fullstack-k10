@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .accordion {
+        width: 600px;
+      }
+      .accordion-checkbox {
+        display: none;
+      }
+      .accordion-header {
+        background-color: #f54809;
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        border-bottom: 1px solid #ddd;
+      }
+      .accordion-content {
+        display: none;
+        padding: 15px;
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+      }
+      .accordion-content p,
+      .accordion-content ol {
+        margin: 0 0 10px;
+      }
+      .accordion-content ol {
+        padding-left: 20px;
+      }
+      .accordion-checkbox:checked + .accordion-header + .accordion-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main content container with blurred background -->
+    <!-- Phần chứa nội dung chính với nền bị mờ -->
+    <div class="accordion">
+      <!-- First accordion item -->
+      <!-- Mục accordion đầu tiên -->
+      <input type="checkbox" id="item1" class="accordion-checkbox" />
+      <label for="item1" class="accordion-header">
+        + How to set random colors?
+        <!-- Làm thế nào để đặt màu ngẫu nhiên? -->
+      </label>
+      <div class="accordion-content">
+        <p>To set random colors:</p>
+        <ol>
+          <li>Add <b>jag-faq-random-colors</b> class.</li>
+          <!-- Thêm class <b>jag-faq-random-colors</b>. -->
+          <li>
+            To change color, open theme{num}.css, find "jag-faq-random-colors".
+            <!-- Để thay đổi màu sắc, mở theme{num}.css, tìm "jag-faq-random-colors". -->
+          </li>
+          <li>You can change color from here.</li>
+          <!-- Bạn có thể thay đổi màu sắc từ đây. -->
+        </ol>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        </p>
+      </div>
+      <!-- Second accordion item -->
+      <!-- Mục accordion thứ hai -->
+      <input type="checkbox" id="item2" class="accordion-checkbox" />
+      <label for="item2" class="accordion-header">
+        + How to use theme colors and add new theme color?
+        <!-- Làm thế nào để sử dụng màu chủ đề và thêm màu chủ đề mới? -->
+      </label>
+      <div class="accordion-content">
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          officiis, culpa inventore optio tempore quidem sed eum autem,
+          perspiciatis mollitia necessitatibus molestiae ut nemo nulla
+          perferendis qui quis sint delectus.
+        </span>
+      </div>
+      <!-- Third accordion item -->
+      <!-- Mục accordion thứ ba -->
+      <input type="checkbox" id="item3" class="accordion-checkbox" />
+      <label for="item3" class="accordion-header">
+        + How to change icon?
+        <!-- Làm thế nào để thay đổi biểu tượng? -->
+      </label>
+      <div class="accordion-content">
+        <span>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem enim
+          molestias illum corrupti labore delectus beatae ipsum quam tenetur
+          facilis voluptatem explicabo odit animi nisi sit architecto, pariatur
+          dolorem fugit.
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
