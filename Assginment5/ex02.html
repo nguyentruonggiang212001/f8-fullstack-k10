@@ -37,6 +37,16 @@
       .accordion-checkbox:checked + .accordion-header + .accordion-content {
         display: block;
       }
+      .item label::before {
+        content: "\002B";
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      .item input[type="checkbox"]:checked + label::before {
+        content: "\2212";
+        font-size: 24px;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
@@ -45,63 +55,57 @@
     <div class="accordion">
       <!-- First accordion item -->
       <!-- Mục accordion đầu tiên -->
-      <input type="checkbox" id="item1" class="accordion-checkbox" />
-      <label for="item1" class="accordion-header">
-        + How to set random colors?
-        <!-- Làm thế nào để đặt màu ngẫu nhiên? -->
-      </label>
-      <div class="accordion-content">
-        <p>To set random colors:</p>
-        <ol>
-          <li>Add <b>jag-faq-random-colors</b> class.</li>
-          <!-- Thêm class <b>jag-faq-random-colors</b>. -->
-          <li>
-            To change color, open theme{num}.css, find "jag-faq-random-colors".
-            <!-- Để thay đổi màu sắc, mở theme{num}.css, tìm "jag-faq-random-colors". -->
-          </li>
-          <li>You can change color from here.</li>
-          <!-- Bạn có thể thay đổi màu sắc từ đây. -->
-        </ol>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        </p>
+      <div class="item">
+        <input type="checkbox" id="item1" class="accordion-checkbox" />
+        <label for="item1" class="accordion-header">
+          How to set random colors?
+          <!-- Làm thế nào để đặt màu ngẫu nhiên? -->
+        </label>
+        <div class="accordion-content">
+          To set random colors: <br />
+          1) Add <strong>jag-faq-random-colors</strong> class. <br />
+          2) To change color, open theme{num}.css, find "jaq-faq-random-colors",
+          <br />
+          3) You can change color from here. <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+          dolore, sint quaerat laudantium fugit reiciendis quos, veniam
+          repellendus possimus ducimus sequi officia temporibus explicabo
+          excepturi quod cupiditate officiis doloremque provident.
+        </div>
       </div>
       <!-- Second accordion item -->
       <!-- Mục accordion thứ hai -->
-      <input type="checkbox" id="item2" class="accordion-checkbox" />
-      <label for="item2" class="accordion-header">
-        + How to use theme colors and add new theme color?
-        <!-- Làm thế nào để sử dụng màu chủ đề và thêm màu chủ đề mới? -->
-      </label>
-      <div class="accordion-content">
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
-          officiis, culpa inventore optio tempore quidem sed eum autem,
-          perspiciatis mollitia necessitatibus molestiae ut nemo nulla
-          perferendis qui quis sint delectus.
-        </span>
+      <div class="item">
+        <input type="checkbox" id="item2" class="accordion-checkbox" />
+        <label for="item2" class="accordion-header">
+          How to use theme colors and add new theme color?
+          <!-- Làm thế nào để sử dụng màu chủ đề và thêm màu chủ đề mới? -->
+        </label>
+        <div class="accordion-content">
+          <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur, officiis, culpa inventore optio tempore quidem sed eum
+            autem, perspiciatis mollitia necessitatibus molestiae ut nemo nulla
+            perferendis qui quis sint delectus.
+          </span>
+        </div>
       </div>
-      <!-- Third accordion item -->
-      <!-- Mục accordion thứ ba -->
-      <input type="checkbox" id="item3" class="accordion-checkbox" />
-      <label for="item3" class="accordion-header">
-        + How to change icon?
-        <!-- Làm thế nào để thay đổi biểu tượng? -->
-      </label>
-      <div class="accordion-content">
-        <span>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem enim
-          molestias illum corrupti labore delectus beatae ipsum quam tenetur
-          facilis voluptatem explicabo odit animi nisi sit architecto, pariatur
-          dolorem fugit.
-        </span>
+      <div class="item">
+        <!-- Third accordion item -->
+        <!-- Mục accordion thứ ba -->
+        <input type="checkbox" id="item3" class="accordion-checkbox" />
+        <label for="item3" class="accordion-header">
+          How to change icon?
+          <!-- Làm thế nào để thay đổi biểu tượng? -->
+        </label>
+        <div class="accordion-content">
+          <span>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            enim molestias illum corrupti labore delectus beatae ipsum quam
+            tenetur facilis voluptatem explicabo odit animi nisi sit architecto,
+            pariatur dolorem fugit.
+          </span>
+        </div>
       </div>
     </div>
   </body>
