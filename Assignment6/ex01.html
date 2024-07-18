@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .head {
+        font-family: "Lobster", sans-serif;
+        font-size: 50px;
+        font-weight: 300;
+        color: #333333;
+      }
+      .sub-head {
+        color: rgba(128, 128, 128, 0.742);
+        width: 500px;
+      }
+      .sub-head span {
+        color: red;
+      }
+      .input-field {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        position: relative;
+        height: 40px;
+      }
+      .form-input {
+        width: 30%;
+        height: 40px;
+        padding: 16px 0px 16px 38px;
+      }
+      select {
+        width: 30%;
+        appearance: none;
+        padding: 7px 0px 16px 43px;
+        color: rgba(128, 128, 128, 0.742);
+      }
+      textarea {
+        margin-top: 60px;
+        width: 30%;
+        height: 100px;
+        padding: 7px 0px 16px 45px;
+      }
+      .icon {
+        background-color: rgba(128, 128, 128, 0.742);
+        color: white;
+        position: absolute;
+        font-size: 20px;
+        padding: 8px;
+      }
+      .icon3 {
+        background-color: rgba(128, 128, 128, 0.742);
+        color: white;
+        position: absolute;
+        font-size: 20px;
+        padding: 8px;
+      }
+
+      .icon2 {
+        margin-left: -23px;
+        font-size: 9px;
+        color: rgba(128, 128, 128, 0.742);
+      }
+      .input:focus,
+      input:hover {
+        border: 2px solid black;
+      }
+      input:focus ~ i {
+        color: white;
+        background-color: black;
+      }
+      input:hover ~ i {
+        color: white;
+        background-color: black;
+      }
+      .submit {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/8c21dec2ec.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h2 class="head">Hey There</h2>
+      <p class="sub-head">
+        <span>We'd like to hear from you.</span> Send us your message or just
+        say hy withour contact form or directly via phone, we love to chat.
+      </p>
+      <form action="#" method="Post">
+        <label for="">
+          <div class="input-field">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="form-input"
+            />
+            <div class="icon2"><i class="fas fa-star"></i></div>
+          </div>
+        </label>
+
+        <label for="">
+          <div class="input-field">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <input
+              type="email"
+              placeholder="your@domain.com"
+              id="email"
+              class="form-input"
+            />
+            <div class="icon2"><i class="fas fa-star"></i></div>
+          </div>
+        </label>
+
+        <label for="">
+          <div class="input-field">
+            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+            <input
+              type="number"
+              placeholder="+44 00 123"
+              id="phone"
+              class="form-input"
+            />
+          </div>
+        </label>
+
+        <label for="">
+          <div class="input-field">
+            <div class="icon"><i class="fa-solid fa-book"></i></div>
+            <select name="subject" id="subject">
+              <option value="">Subject</option>
+              <option value="Javascript">Javascript</option>
+            </select>
+            <div class="icon2"><i class="fas fa-sort ft-12"></i></div>
+          </div>
+        </label>
+
+        <label for="">
+          <div class="input-field">
+            <div class="icon3"><i class="fas fa-comment-alt"></i></div>
+            <textarea name="" id="message" placeholder="Message"></textarea>
+            <div class="icon2"><i class="fas fa-star"></i></div>
+          </div>
+        </label>
+
+        <div>
+          <h2>ádasdasd</h2>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
