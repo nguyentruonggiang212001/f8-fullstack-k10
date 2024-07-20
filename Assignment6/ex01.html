@@ -10,6 +10,11 @@
         padding: 0;
         margin: 0;
       }
+      body {
+        color: rgba(128, 128, 128, 0.742);
+        font-family: "Lato", sans-serif;
+        margin-left: 10px;
+      }
       .head {
         font-family: "Lobster", sans-serif;
         font-size: 50px;
@@ -17,13 +22,15 @@
         color: #333333;
       }
       .sub-head {
-        color: rgba(128, 128, 128, 0.742);
         width: 500px;
+        margin-top: 10px;
       }
       .sub-head span {
         color: red;
+        margin-top: 10px;
       }
       .input-field {
+        margin-top: 10px;
         display: flex;
         align-items: center;
         margin-bottom: 10px;
@@ -60,40 +67,130 @@
         position: absolute;
         font-size: 20px;
         padding: 8px;
+        height: 100px;
+        margin-top: 60px;
       }
-
       .icon2 {
         margin-left: -23px;
         font-size: 9px;
         color: rgba(128, 128, 128, 0.742);
       }
+      .input-field:hover .icon {
+        background-color: black;
+      }
+      .input-field:hover .icon2 {
+        color: black;
+      }
+      .input-field:hover .icon3 {
+        background-color: black;
+      }
+      .title {
+        display: none;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        color: #fff;
+        top: -130%;
+        left: 1%;
+      }
+      .title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        border: 1rem solid;
+        border-color: rgb(0, 0, 0, 0.9) transparent transparent;
+        border-bottom: 0;
+        margin-left: -110px;
+      }
+      .input-field input:focus ~ .title,
+      .input-field select:focus ~ .title,
+      .input-field textarea:focus ~ .title {
+        display: block;
+      }
       .input:focus,
       input:hover {
         border: 2px solid black;
       }
-      input:focus ~ i {
-        color: white;
-        background-color: black;
+      .slect:focus,
+      select:hover {
+        border: 2px solid black;
       }
-      input:hover ~ i {
-        color: white;
-        background-color: black;
+      .textarea:focus,
+      textarea:hover {
+        border: 2px solid black;
       }
-      .submit {
-        display: flex;
-        justify-content: space-between;
+      .box {
+        margin-top: 80px;
+      }
+      .btn {
+        margin-left: 90px;
+        background: red;
+        color: white;
+        padding: 7px 32px 3px 32px;
+        border: none;
+      }
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        left: 10px;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border: solid;
+      }
+      .container:hover input ~ .checkmark {
+        background-color: white;
+      }
+      .container input:checked ~ .checkmark {
+        background-color: white;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .container .checkmark:after {
+        left: 7px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid 1px black;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+      }
+      .container {
+        padding-left: 2.1rem;
       }
     </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/8c21dec2ec.js"></script>
   </head>
   <body>
     <div class="main">
       <h2 class="head">Hey There</h2>
+      <!-- Sub-heading encouraging users to send a message -->
       <p class="sub-head">
         <span>We'd like to hear from you.</span> Send us your message or just
         say hy withour contact form or directly via phone, we love to chat.
       </p>
+      <!-- Form for users to send a message -->
       <form action="#" method="Post">
+        <!-- Input field for the user's name -->
         <label for="">
           <div class="input-field">
             <div class="icon"><i class="fas fa-user"></i></div>
@@ -101,11 +198,13 @@
               type="text"
               placeholder="Enter your name"
               class="form-input"
+              title="Enter your name"
             />
+            <div class="title">Enter your name</div>
             <div class="icon2"><i class="fas fa-star"></i></div>
           </div>
         </label>
-
+        <!-- Input field for the user's email -->
         <label for="">
           <div class="input-field">
             <div class="icon"><i class="fas fa-envelope"></i></div>
@@ -115,10 +214,11 @@
               id="email"
               class="form-input"
             />
+            <div class="title">Enter your email</div>
             <div class="icon2"><i class="fas fa-star"></i></div>
           </div>
         </label>
-
+        <!-- Input field for the user's phone number -->
         <label for="">
           <div class="input-field">
             <div class="icon"><i class="fas fa-mobile-alt"></i></div>
@@ -128,30 +228,39 @@
               id="phone"
               class="form-input"
             />
+            <div class="title">Enter your phone number</div>
           </div>
         </label>
-
+        <!-- Dropdown for selecting a subject -->
         <label for="">
           <div class="input-field">
             <div class="icon"><i class="fa-solid fa-book"></i></div>
             <select name="subject" id="subject">
               <option value="">Subject</option>
-              <option value="Javascript">Javascript</option>
+              <option value="Sicbo">Sicbo</option>
+              <option value="Roulette">Roulette</option>
             </select>
+            <div class="title">Choose Subject</div>
             <div class="icon2"><i class="fas fa-sort ft-12"></i></div>
           </div>
         </label>
-
+        <!-- Textarea for the user's message -->
         <label for="">
           <div class="input-field">
             <div class="icon3"><i class="fas fa-comment-alt"></i></div>
             <textarea name="" id="message" placeholder="Message"></textarea>
+            <div class="title">Enter your message</div>
             <div class="icon2"><i class="fas fa-star"></i></div>
           </div>
         </label>
-
-        <div>
-          <h2>ádasdasd</h2>
+        <!-- Checkbox for sending a copy of the message and the send button -->
+        <div class="box">
+          <label class="container">
+            Send me a copy of this message
+            <input type="checkbox" checked />
+            <span class="checkmark"></span>
+          </label>
+          <button class="btn">SEND</button>
         </div>
       </form>
     </div>
