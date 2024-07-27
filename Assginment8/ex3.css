@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Asap", sans-serif;
+    display: flex;
+    margin-left: 100px;
+    background-color: rgba(255, 166, 0, 0.044);
+  }
+  .real-property {
+    width: 80%;
+  }
+  .header {
+    display: inline-block;
+  }
+  h2 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .header::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 850px;
+    height: 1px;
+    background-color: #cccccc45;
+    top: 3%;
+    left: 31%;
+  }
+  .menu {
+    display: flex;
+    margin-top: 15px;
+    list-style: none;
+    gap: 20px;
+  }
+  .sub-menu {
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: black;
+    background-color: #e5e5e5;
+    font-weight: bold;
+    gap: 5px;
+  }
+  .sub-menu span {
+    font-size: 10px;
+    font-style: italic;
+  }
+  .sub-menu:hover {
+    color: white;
+    background-color: rgb(193, 113, 64);
+  }
+  .place {
+    margin-top: 20px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .place a {
+    text-decoration: none;
+  }
+  .place h3 {
+    position: relative;
+    top: -70%;
+    font-size: 22px;
+    margin: 10px 0;
+    color: white;
+    left: 4%;
+  }
+  .place p {
+    font-size: 16px;
+    color: white;
+    position: relative;
+    top: -10%;
+    left: 4%;
+    font-weight: 700;
+  }
+  .place span {
+    color: #ccc;
+    font-weight: lighter;
+  }
+  .place-img img {
+    border-radius: 10px;
+    margin-bottom: -68px;
+  }

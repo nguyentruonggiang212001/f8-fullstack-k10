@@ -1,0 +1,61 @@
+body {
+    font-family: "Asap", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .banner {
+    position: relative;
+    background: url(./vingroup.jpg) no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  .logo {
+    width: 200px;
+    margin-left: 38px;
+    margin-top: 195px;
+    height: 115px;
+    border-radius: 4px;
+  }
+  .text-content {
+    margin-left: 20px;
+    margin-top: 175px;
+  }
+  .text-content h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .text-content p {
+    margin: 5px -5px;
+    display: inline-block;
+    padding: 0px 10px;
+  }
+  .text-content span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .nav {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    border-top: 1px solid #e0e0e0;
+    position: absolute;
+    left: 70%;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 20px;
+  }
+  .nav a.active:after {
+    content: "";
+    background-color: #ff574d;
+    height: 3px;
+    width: 80px;
+    position: absolute;
+    top: 72%;
+    margin-left: -80px;
+  }
