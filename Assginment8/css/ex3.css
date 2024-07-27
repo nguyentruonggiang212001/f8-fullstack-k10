@@ -48,14 +48,23 @@
     font-weight: bold;
     gap: 5px;
   }
-  .sub-menu span {
+  .sub-menu span,.sub-menu-active span {
     font-size: 10px;
     font-style: italic;
   }
-  .sub-menu:hover {
+  .sub-menu-active {
     color: white;
-    background-color: rgb(193, 113, 64);
-  }
+    background-color: rgb(193, 113, 64); 
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    gap: 5px;
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  } 
   .place {
     margin-top: 20px;
     display: flex;

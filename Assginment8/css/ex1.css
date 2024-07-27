@@ -26,8 +26,9 @@ body {
   }
   .banner-text h2 {
     color: #bf4240;
-    font-size: 2.5em;
     margin: 0;
+    font-weight: 900;
+    padding: 10px 0px;
   }
   .banner-text p {
     color: #3f3424;
@@ -37,12 +38,12 @@ body {
   .banner-price {
     position: absolute;
     top: 65%;
-    left: 36%;
+    left: 44%;
     background-color: #bf4240;
     color: white;
     padding: 16px 32px;
     border-radius: 5px;
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .fa-location-dot {
     color: #3f3424;
