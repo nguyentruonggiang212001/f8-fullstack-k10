@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        display: flex;
+        padding: 20px;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .timeline-container {
+        padding: 20px;
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      .timeline-content {
+        width: 320px;
+        text-align: right;
+        transition: transform 0.5s;
+      }
+
+      .date {
+        font-size: 1em;
+        color: #666;
+        min-width: 80px;
+        line-height: 2.4;
+        transition: transform 0.5s;
+      }
+
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.2em;
+        margin: 0;
+        color: #3b3b3b;
+      }
+
+      .description {
+        font-size: 1em;
+        color: #666;
+        margin: 10px 0;
+      }
+      .dot-separating {
+        line-height: 2.4;
+        height: 10px;
+        width: 10px;
+        background: rgba(35, 192, 35, 0.796);
+        border-radius: 50%;
+        margin: 12px 24px;
+        box-shadow: 0px 0px 0px 8px rgba(237, 246, 244, 0.696);
+        position: relative;
+      }
+      .dot-separating::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 5px;
+        width: 1px;
+        height: 100px;
+        background-color: rgba(128, 128, 128, 0.195);
+      }
+      .timeline-item:last-child .dot-separating::before {
+        display: none;
+      }
+      .label {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: whitesmoke;
+        color: gray;
+        border-radius: 99px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .timeline-item:hover .timeline-content {
+        transform: translateX(120%);
+        text-align: left;
+      }
+
+      .timeline-item:hover:hover .date {
+        transform: translateX(-170%);
+        text-align: right;
+      }
+      .timeline-item:hover .label {
+        color: white;
+        background-color: rgba(149, 72, 17, 0.819);
+      }
+      .back-img img {
+        position: absolute;
+        left: 60%;
+      }
+      .sub-img img {
+        position: absolute;
+        left: 54%;
+        top: 27%;
+      }
+      .text-img {
+        display: inline-block;
+        height: 332px;
+        width: 177px;
+        background-color: rgb(56, 56, 174);
+        left: 841px;
+        position: absolute;
+        top: 28%;
+      }
+      .text-img span {
+        font-size: 50px;
+        position: relative;
+        top: 69%;
+        left: 39%;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: white;
+      }
+      .text-img p {
+        position: relative;
+        top: 65%;
+        left: 25%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Together We Build</h3>
+            <p class="description">
+              In quasi vitae non alias nulla qui dolores. dolor non tempora
+              tenetur
+            </p>
+            <span class="label">Family Law</span>
+          </div>
+          <div class="dot-separating"></div>
+          <span class="date">2007 - 2012</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Completed 1000 Cases</h3>
+            <p class="description">
+              In quasi vitae non alias nulla qui dolores. dolor non tempora
+              tenetur
+            </p>
+            <span class="label">Criminal Law</span>
+          </div>
+          <div class="dot-separating"></div>
+          <span class="date">2012 - 2016</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>We Are Number One</h3>
+            <p class="description">
+              In quasi vitae non alias nulla qui dolores. dolor non tempora
+              tenetur
+            </p>
+            <span class="label">Business Law</span>
+          </div>
+          <div class="dot-separating"></div>
+          <span class="date">2016 - 2018</span>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Intellectual Property</h3>
+            <p class="description">
+              In quasi vitae non alias nulla qui dolores. dolor non tempora
+              tenetur
+            </p>
+            <span class="label">Car Accident</span>
+          </div>
+          <div class="dot-separating"></div>
+          <span class="date">2018 - 2022</span>
+        </div>
+      </div>
+      <div class="content-img">
+        <div class="back-img">
+          <img
+            src="./krixitieccainghien.jpg"
+            alt="krixitieccainghien"
+            width="400px"
+            height="400px"
+          />
+          <div class="sub-img">
+            <img src="./sub-img.webp" alt="bac" width="200px" height="350px" />
+            <div class="text-img">
+              <span>+76</span>
+              <p>Winning Awards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

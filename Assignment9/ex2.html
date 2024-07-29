@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout</title>
+    <style>
+      body {
+        margin: 50px auto;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f9f9;
+      }
+      .container {
+        font-family: "Inter", sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        gap: 20px;
+      }
+      .box {
+        font-family: "Space Grotesk", sans-serif;
+        background-color: white;
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
+        padding: 20px;
+        width: 300px;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+      }
+      .box h3 {
+        margin: 30px 0 10px 0;
+        font-size: 1.25em;
+      }
+      .box p {
+        margin: 0;
+        color: #666;
+      }
+      .box i {
+        font-size: 40px;
+        color: sienna;
+      }
+      .box:hover {
+        border: none;
+        z-index: 1;
+      }
+      .box:hover .link {
+        display: flex;
+      }
+      .box:hover i:not(.fa-arrow-right) {
+        display: none;
+      }
+      .link {
+        align-items: center;
+        color: #fff;
+        display: none;
+      }
+      .link a {
+        text-decoration: none;
+        color: white;
+      }
+      .link i {
+        font-size: 20px;
+        color: #ccc;
+      }
+      .link:hover {
+        display: flex;
+      }
+      .arrow {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        font-size: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+      }
+      .link .arrow:hover i {
+        color: #000;
+        background-color: #fff;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 30px;
+        height: 30px;
+      }
+      .box:hover .text {
+        transform: translateY(-15%);
+        color: #fff;
+        transition: transform 0.5s;
+      }
+      .box a,
+      .arrow {
+        position: relative;
+        top: 80%;
+      }
+      .box:hover p {
+        color: #fff;
+      }
+      .box:nth-child(1):hover::before,
+      .box:nth-child(2):hover::before,
+      .box:nth-child(3):hover::before,
+      .box:nth-child(4):hover::before,
+      .box:nth-child(5):hover::before,
+      .box:nth-child(6):hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        background-color: rgba(151, 89, 74, 0.371);
+        z-index: -1;
+        margin: 0 auto;
+        transition: transform 0.5s;
+      }
+      .box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 300px;
+        z-index: -9;
+        display: none;
+      }
+      .box:hover img {
+        display: block;
+      }
+      .border-img {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        border: 1px solid #ffffff;
+        pointer-events: none;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/8c21dec2ec.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <span class="border-img"></span>
+        <i class="fa-solid fa-building-columns"></i>
+        <div class="text">
+          <h3>This is war, and in war the only crime is to lose</h3>
+          <p>Quis autem iure qui voluptate velit ess quam molestiae was.</p>
+        </div>
+        <div class="link">
+          <a href="#">Learn More</a>
+          <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <img src="./krixitieccainghien.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="border-img"></span>
+        <i class="fa-solid fa-briefcase"></i>
+        <div class="text">
+          <h3>Is your business ready for Integration</h3>
+          <p>Quis autem iure qui voluptate velit ess quam molestiae was.</p>
+        </div>
+        <div class="link">
+          <a href="#">Learn More</a>
+          <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <img src="./krixitieccainghien.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="border-img"></span>
+        <i class="fa-solid fa-gavel"></i>
+        <div class="text">
+          <h3>Do injured workers have to be treated</h3>
+          <p>Quis autem iure qui voluptate velit ess quam molestiae was.</p>
+        </div>
+        <div class="link">
+          <a href="#">Learn More</a>
+          <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <img src="./krixitieccainghien.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="border-img"></span>
+        <i class="fa-regular fa-handshake"></i>
+        <div class="text">
+          <h3>Nobis occaecati nobis Repudiamus andaeum</h3>
+          <p>Quis autem iure qui voluptate velit ess quam molestiae was.</p>
+        </div>
+        <div class="link">
+          <a href="#">Learn More</a>
+          <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <img src="./krixitieccainghien.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="border-img"></span>
+        <i class="fa-solid fa-scale-balanced"></i>
+        <div class="text">
+          <h3>How is equity determined in a divorce</h3>
+          <p>Quis autem iure qui voluptate velit ess quam molestiae was.</p>
+        </div>
+        <div class="link">
+          <a href="#">Learn More</a>
+          <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <img src="./krixitieccainghien.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="border-img"></span>
+        <i class="fa-solid fa-handcuffs"></i>
+        <div class="text">
+          <h3>Amet massa vel dolor deleni recusand</h3>
+          <p>Quis autem iure qui voluptate velit ess quam molestiae was.</p>
+        </div>
+        <div class="link">
+          <a href="#">Learn More</a>
+          <div class="arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+          <img src="./krixitieccainghien.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
