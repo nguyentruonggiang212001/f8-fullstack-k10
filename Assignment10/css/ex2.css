@@ -1,0 +1,93 @@
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .tabs {
+    width: 1000px;
+    top: 0;
+    left: 0;
+    margin: 40px 27%;
+    font-size: 0;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    font-size: 15px;
+    transform-origin: top center;
+  }
+  input[type="radio"]:checked + label {
+    padding: 10px 10px;
+    background-color: rgb(24, 172, 230);
+    color: white;
+  }
+  label:hover {
+    background-color: rgb(21, 165, 222);
+    color: white;
+  }
+  .content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    width: 649px;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    border-top: none;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.626);
+  }
+  p {
+    margin-top: -24px;
+  }
+  .content-item {
+    position: absolute;
+    transform-origin: top center;
+    height: 100%;
+    display: none;
+    position: fixed;
+    transition: opacity 0.4s, transform 0.5s;
+  }
+  #tab1:checked ~ .content #content1,
+  #tab2:checked ~ .content #content2,
+  #tab3:checked ~ .content #content3,
+  #tab4:checked ~ .content #content4 {
+    display: block;
+    position: inherit;
+    opacity: 1;
+    transform: perspective(700px) rotateX(0deg);
+    transition: transform 0, 4 ease, opacity 0.7s ease;
+  }
+  #tab1:not(:checked) ~ .content #content1,
+  #tab2:not(:checked) ~ .content #content2,
+  #tab3:not(:checked) ~ .content #content3,
+  #tab4:not(:checked) ~ .content #content4 {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transform: perspective(500px) rotateX(-90deg);
+    transition: transform 0, 4 ease, opacity 0.7s ease;
+    z-index: 1;
+  }
+  label {
+    margin: 0;
+    border-right: 1px solid #ccc;
+  }
+  .scroll {
+    position: relative;
+    top: 21px;
+    overflow-x: scroll;
+    width: 782px;
+    left: -21px;
+  }
+  #tabs label {
+    padding: 8px 9px;
+  }

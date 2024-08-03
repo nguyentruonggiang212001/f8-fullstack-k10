@@ -50,6 +50,8 @@
   .box:hover {
     border: none;
     z-index: 1;
+    display: block;
+    
   }
   .box:hover .link {
     display: flex;
@@ -90,18 +92,10 @@
     width: 25px;
     height: 25px;
   }
-  .box:hover .text,
-  .link a .arrow {
+  .box:hover .text {
     transform: translateY(-15%);
     color: #fff;
     transition: transform 0.5s;
-  }
-  .box:hover.link,
-  a,
-  .arrow {
-    transform: translateY(-15%);
-    color: #fff;
-    transition: transform 1s;
   }
   .box a,
   .arrow {
@@ -146,4 +140,13 @@
     bottom: 15px;
     left: 15px;
     border: 1px solid #ffffff;
+    margin-top: 10px;
+  }
+  .box:hover .border-img{
+    transform: translateY(-3%);
+    transition: transform 0.5s;
+  }
+  .box:hover .link a i{
+    transform: translateY(-10%);
+    transition: transform 0.5s;
   }

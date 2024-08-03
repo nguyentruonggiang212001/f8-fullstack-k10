@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Navigation</title>
+    <link rel="stylesheet" href="./css/ex2.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <!-- Radio button for the first tab, checked by default -->
+      <input type="radio" id="tab1" name="tab" checked />
+      <!-- Label for the first tab -->
+      <label for="tab1">Simples slideshow</label>
+      <!-- Radio button for the second tab -->
+      <input type="radio" id="tab2" name="tab" />
+      <!-- Label for the second tab -->
+      <label for="tab2">Algoritmo de Levenshtein</label>
+      <!-- Radio button for the third tab -->
+      <input type="radio" id="tab3" name="tab" />
+      <!-- Label for the third tab -->
+      <label for="tab3">Barra de progresso</label>
+      <!-- Radio button for the fourth tab -->
+      <input type="radio" id="tab4" name="tab" />
+      <!-- Label for the fourth tab -->
+      <label for="tab4">Captcha com PHP</label>
+      <!-- Content container for the tabs -->
+      <div class="content">
+        <!-- Content for the first tab -->
+        <div class="content-item" id="content1">
+          <h2>Simples slideshow</h2>
+          <p>
+            Mais uma postagem simples e bem usual. Um sistema de slideshow
+            fácil, rápido e leve, apenas com jQuery e CSS. Poderá ser usado em
+            <br />
+            banners laterais, animações de postagens e etc. Iniciando, vamos
+            montar o CSS que definirá a estrutura final do slide...
+          </p>
+        </div>
+        <!-- Content for the second tab -->
+        <div class="content-item" id="content2">
+          <h2>Algoritmo de Levenshtein</h2>
+          <p>
+            Atualmente fazer buscas on-line tem se tornado algo muito comum,
+            quase tudo na internet gira em tomo de simples buscas.
+            <br />
+            Então decidi publicar um sistema simples, porém muito interessante
+            que deixará seu sistema de busca muito legal.
+            <br />
+            O PHP possui uma função nativa,levenshtein. seu manual mostra todos
+            os detalhes do seu uso e implementação.
+          </p>
+        </div>
+        <!-- Content for the third tab -->
+        <div class="content-item" id="content3">
+          <h2>Barra de progresso</h2>
+          <p>
+            Uma barra de progresso pode ser um processo importante ao ocultar o
+            carregamento de páginas ou/e arquivos.
+            <br />
+            Então ter uma barra de progresso responsiva e sem usar Jquery,
+            apenas usando CSS3 e JavaScript. Isso sem dúvida deixaria a sua
+            aplicação um pouquinho mais leve.
+          </p>
+        </div>
+        <!-- Content for the fourth tab -->
+        <div class="content-item" id="content4">
+          <h2>Captcha com PHP</h2>
+          <p>
+            A postagem de hoje aborda um ponto importante para nós, que temos
+            servidores públicos, que qualquer um pode acessar, comentar e etc.
+            <br />
+            Com esse sistema, sem dúvida seus formulários ganharão mais
+            segurança contra spammers.
+          </p>
+        </div>
+        <!-- Scroll bar container -->
+        <div class="scroll"></div>
+      </div>
+    </div>
+  </body>
+</html>
