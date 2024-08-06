@@ -56,6 +56,7 @@ header {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   outline: none;
+  
 }
 ::placeholder {
   color: #000;
@@ -126,6 +127,7 @@ header {
   margin-bottom: 20px;
 }
 .sub-header h1 {
+
   font-weight: 700;
   font-size: 67px;
   line-height: 77px;
@@ -157,35 +159,33 @@ header {
   border-radius: 10px;
   font-weight: 500;
   margin-right: 10px;
-  transition: 0.3s ease;
-  border: 1px solid ;
 }
 .header-btn button:hover {
   background-color: white;
   color: #f55556;
+  border: 1px solid #f55556;
 }
 .cirle {
-  position: relative;
+  position: absolute;
   margin-left: 210px;
   width: 75px;
   height: 75px;
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  bottom: 81px;
+  bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: yellow;
 }
 .order {
-  position: relative;
+  position: absolute;
+  margin-left: 127px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
   bottom: 70px;
   font-weight: 500;
-  left: 107%;
-  top: -65%;
 }
 .chef img {
   position: absolute;
@@ -267,6 +267,7 @@ section {
   z-index: 1;
   opacity: 1;
 }
+
 .service img {
   height: 60px;
   margin-bottom: 30px;
@@ -279,7 +280,7 @@ section {
   color: gray;
 }
 article {
-  padding: 60px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
@@ -326,13 +327,11 @@ article img {
   border: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: 0.3s ease;
-  border: 1px solid;
 }
 .article-header button:hover {
   background-color: white;
   color: #f55556;
- 
+  border: 1px solid #f55556;
 }
 .sub-article {
   position: relative;
@@ -373,12 +372,11 @@ article img {
   border: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: 0.3s ease;
-  border: 1px solid ;
 }
 .sub-article button:hover {
   background-color: white;
   color: #f55556;
+  border: 1px solid #f55556;
 }
 .sub-article img {
   position: absolute;
