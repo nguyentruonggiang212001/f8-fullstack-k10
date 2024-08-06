@@ -159,6 +159,7 @@ header {
   border-radius: 10px;
   font-weight: 500;
   margin-right: 10px;
+  transition: 0.3s ease;
 }
 .header-btn button:hover {
   background-color: white;
@@ -166,26 +167,27 @@ header {
   border: 1px solid #f55556;
 }
 .cirle {
-  position: absolute;
+  position: relative;
   margin-left: 210px;
   width: 75px;
   height: 75px;
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  bottom: 60px;
+  bottom: 81px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: yellow;
 }
 .order {
-  position: absolute;
-  margin-left: 127px;
+  position: relative;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
   bottom: 70px;
   font-weight: 500;
+  left: 107%;
+  top: -65%;
 }
 .chef img {
   position: absolute;
@@ -279,7 +281,7 @@ section {
   color: gray;
 }
 article {
-  padding: 30px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
@@ -326,6 +328,7 @@ article img {
   border: none;
   border-radius: 10px;
   font-weight: 500;
+  transition: 0.3s ease;
 }
 .article-header button:hover {
   background-color: white;
@@ -371,11 +374,14 @@ article img {
   border: none;
   border-radius: 10px;
   font-weight: 500;
+  transition: 0.3s ease;
+ 
 }
 .sub-article button:hover {
   background-color: white;
   color: #f55556;
   border: 1px solid #f55556;
+  
 }
 .sub-article img {
   position: absolute;
