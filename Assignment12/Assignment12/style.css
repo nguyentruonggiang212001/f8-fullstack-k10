@@ -20,7 +20,7 @@ body{
   display: flex;
   flex-direction: column;
   top: 119px;
-  left: 230px;
+  left: 270px;
 }
 .container .logo {
   display: flex;
@@ -59,7 +59,7 @@ body{
   margin-top: -41px;
 }
 .swtich {
-  margin-top: 50px;
+  margin-top: 101px;
   display: flex;
   justify-content: center;
 }
@@ -151,7 +151,7 @@ body{
   box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
   height: 622px;
   transition: 1s ease-in-out;
-  top: 80px;
+  top: 50px;
 }
 .form-login h2 ,.form-create-account h2 {
   font-size: 1.625rem;
@@ -234,8 +234,8 @@ body{
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(128, 128, 128, 0.184);
-  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
   position: relative;
   cursor: pointer;
   background-color: #23d2e2;
@@ -253,6 +253,7 @@ body{
   transform-origin: center;
   transform: rotate(45deg);
   display: block;
+  
 }
 .checkbox-wrap span::after {
   transform: rotate(-45deg);
@@ -367,19 +368,19 @@ body{
 }
 .form-create-account {
   position: absolute;
-    width: 440px;
-    padding: 64px;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
-    height: 767px;
-    transform: translateX(150%);
-    transition: 1s ease-in-out;
-    transition-property: transform opacity visibility;
-    opacity: 0;
-    visibility: hidden;
-    left: 0;
-    top: -7px;
+  width: 440px;
+  padding: 64px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  height: 767px;
+  transform: translateX(150%);
+  transition: 1s ease-in-out;
+  transition-property: transform opacity visibility;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  top: -7px;
 }
 .form-btn-create button:hover{
   background-color: #1bc5d4;
@@ -403,22 +404,30 @@ body{
 
 @media screen and (max-width: 1500px){
   .container {
-    background-position: 0 0;
+  background-position: 0 0;
 } 
   .landing-right{
     display: none;
   }
   .container .wrapper-landing {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 141px;
-    left: 158px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 141px;
+  left: 158px;
   } 
   .swtich {
-    margin-top: 37px;
-    display: flex;
-    justify-content: center;
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+  }
+  .form-login {
+  margin-top: 30px;
+  left: 24%;
+  }
+  .form-create-account {
+  top: 10%;
+  left: 25%;
   }
 }
 @media screen and (max-width: 1364px){ 
