@@ -151,7 +151,7 @@ body{
   box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
   height: 622px;
   transition: 1s ease-in-out;
-  top: 40px;
+  top: 80px;
 }
 .form-login h2 ,.form-create-account h2 {
   font-size: 1.625rem;
