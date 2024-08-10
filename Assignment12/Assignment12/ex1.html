@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Viewport settings for responsive design -->
+    <title>Document</title>
+    <!-- Document title -->
+  </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  /><!-- Google Fonts: Titillium Web -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  /><!-- Google Fonts: Rajdhani -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  /><!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="./style.css" /><!-- Link to external CSS file -->
+  <body>
+    <div class="container">
+      <!-- Main container -->
+      <input
+        type="radio"
+        name="radio"
+        id="login"
+        hidden
+      /><!-- Radio input for login -->
+      <input
+        type="radio"
+        name="radio"
+        id="register"
+        hidden
+      /><!-- Radio input for register -->
+      <div class="wrapper-landing">
+        <!-- Wrapper for the landing page -->
+        <div class="logo">
+          <!-- Logo section -->
+          <img
+            src="./img/logo.png"
+            alt="logo"
+            width="50px"
+            height="60px"
+          /><!-- Logo image -->
+        </div>
+        <h2 class="text-header">Wellcom to</h2>
+        <!-- Header text -->
+        <h1 class="textsub-header">Vikinger</h1>
+        <!-- Subheader text -->
+        <p class="content-header">
+          The next generation social network & community! Connect with your
+          friends and play with our quests and badges gamification system!
+        </p>
+        <!-- Description text -->
+        <div class="swtich">
+          <!-- Buttons to switch between Login and Register forms -->
+          <label for="login" class="swtich-button-login">Login</label
+          ><!-- Login button -->
+          <label for="register" class="swtich-button-register">Register</label
+          ><!-- Register button -->
+        </div>
+      </div>
+      <div class="landing-right"></div>
+      <!-- Right side of the landing page (empty for design purposes) -->
+      <div class="landing-form">
+        <!-- Container for the forms -->
+        <div class="form-login" id="login">
+          <!-- Login form section -->
+          <div><img src="./img/rocket.webp" alt="rocket" /></div>
+          <!-- Decorative image -->
+          <h2>Account Login</h2>
+          <!-- Login form header -->
+          <form class="form">
+            <!-- Login form -->
+            <div class="form-input">
+              <!-- Username/Email input field -->
+              <input
+                type="text"
+                id="login-username"
+                name="login_username"
+                placeholder=" "
+              />
+              <label for="login-username">Username or Email</label>
+            </div>
+            <div class="form-input">
+              <!-- Password input field -->
+              <input
+                type="password"
+                id="login-password"
+                name="login_password"
+                placeholder=" "
+              />
+              <label for="login-password">Password</label>
+            </div>
+            <div class="form-row">
+              <!-- Login options -->
+              <div class="form-row-item">
+                <div class="checkbox-wrap">
+                  <!-- Remember Me option -->
+                  <input type="checkbox" id="checkbox" />
+                  <span></span>
+                  <label for="login-remember"> Remember Me </label>
+                  <a href="#">Forgot Password?</a
+                  ><!-- Forgot Password link -->
+                </div>
+                <div class="form-btn">
+                  <!-- Login button -->
+                  <button>Login to your Account!</button>
+                </div>
+                <p class="lined-text">Login with your Social Account</p>
+                <!-- Social login options -->
+                <div class="social-link">
+                  <!-- Social media links -->
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-create-account" id="create">
+          <!-- Registration form section -->
+          <div><img src="./img/rocket-sub.webp" alt="rocket" /></div>
+          <!-- Decorative image -->
+          <h2>Create your Account!</h2>
+          <!-- Registration form header -->
+          <form class="form">
+            <!-- Registration form -->
+            <div class="form-input">
+              <!-- Email input field -->
+              <input
+                type="text"
+                id="register-email"
+                name="register_email"
+                placeholder=" "
+              />
+              <label for="register-email">Your Email</label>
+            </div>
+            <div class="form-input">
+              <!-- Username input field -->
+              <input
+                type="text"
+                id="register-username"
+                name="register_username"
+                placeholder=" "
+              />
+              <label for="register-username">Username</label>
+            </div>
+            <div class="form-input">
+              <!-- Password input field -->
+              <input
+                type="password"
+                id="login-password"
+                name="login_password"
+                placeholder=" "
+              />
+              <label for="login-password">Password</label>
+            </div>
+            <div class="form-input">
+              <!-- Repeat Password input field -->
+              <input
+                type="password"
+                id="register-password-repeat"
+                name="register_password_repeat"
+                placeholder=" "
+              />
+              <label for="register-password-repeat">Repeat Password</label>
+            </div>
+            <div class="form-row">
+              <!-- Registration options -->
+              <div class="form-row-item">
+                <div class="checkbox-wrap">
+                  <!-- Newsletter option -->
+                  <input type="checkbox" id="checkbox" />
+                  <span></span>
+                  <label for="register-newsletter"
+                    >Send me news and updates via email</label
+                  >
+                </div>
+                <div class="form-btn-create">
+                  <!-- Register button -->
+                  <button>Register Now!</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="form-text">
+            You'll receive a confirmation email in your inbox with a link to
+            activate your account. If you have any problems,
+            <a href="#">contact us</a>
+          </p>
+          <!-- Additional registration information -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

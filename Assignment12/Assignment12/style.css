@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x:hidden ;
+}
+.container {
+  background-image: url(./img/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.container .wrapper-landing {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 119px;
+  left: 230px;
+}
+.container .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .text-header {
+  margin-top: 36px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Rajdhani", sans-serif;
+}
+.container .textsub-header {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 6.5rem;
+  font-weight: 900;
+  position: relative;
+  top: -44px;
+}
+.container .text-header,
+.textsub-header {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.container .content-header {
+  width: 384px;
+  margin: 30px auto 0;
+  font-size: 1.125rem;
+  line-height: 1.3333333333em;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  margin-top: -41px;
+}
+.swtich {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.swtich-button-login,
+.swtich-button-register {
+  font-family: "Rajdhani", sans-serif;
+  width: 180px;
+  height: 54px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 54px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.swtich-button-login {
+  color: #3e3f5e;
+  background-color: #fff;
+  cursor: auto;
+}
+.swtich-button-login {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.swtich-button-register:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.container #login:checked ~ .wrapper-landing .swtich label[for="login"] {
+  color: #3e3f5e;
+  background-color: #fff;
+  cursor: auto;
+}
+.container #register:checked ~ .wrapper-landing .swtich label[for="register"] {
+  color: #3e3f5e;
+  background-color: #fff;
+  cursor: auto;
+}
+.container #register:checked ~ .wrapper-landing  label[for="login"] {
+  color: white;
+  background-color: transparent;
+  cursor: auto;
+}
+.container #register:checked ~ .landing-form .form-create-account {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+.container #register:checked ~ .landing-form .form-login {
+  transform: translateX(170%);
+}
+.landing-right {
+  background: url(./img/dot-texture.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 60%;
+  height: 140%;
+  top: -20%;
+  right: -30%;
+}
+.landing-form {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: 200px;
+  
+}
+ .form-login img {
+  position: absolute;
+  top: -64px;
+  left: -76px;
+}
+.form-create-account img{
+  position: absolute;
+  top: -16px;
+  left: -76px;
+}
+.form-login {
+  position: relative;
+  width: 484px;
+  padding: 64px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  height: 622px;
+  transition: 1s ease-in-out;
+  top: 40px;
+}
+.form-login h2 ,.form-create-account h2 {
+  font-size: 1.625rem;
+  text-align: center;
+  color: #3e3f5e;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1em;
+  font-weight: 700;
+}
+.form-login .form,.form-create-account .form{
+  margin-top: 76px;
+}
+.form-input{
+  position: relative;
+}
+.form-input label {
+  position: absolute;
+  color: #adafca;
+  font-size: 1rem;
+  font-weight: 600;
+  top: 18px;
+  left: 20px;
+  transition: all .3s ease-in-out;
+  pointer-events: none;
+  font-family: "Rajdhani", sans-serif;
+}
+.form-input input[type=text], input[type=password] {
+  height: 54px;
+  padding: 0 18px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  color: #3e3f5e;
+  transition: border-color .2s ease-in-out;
+  outline: none;
+  border-radius: 12px;
+}
+.form-input input:focus{
+  border-color: #6f42c1; 
+}
+.form-input input:focus + label,
+.form-input input:not(:placeholder-shown) + label{
+  top: -8px;
+  font-size: 12px;
+  padding: 0 4px;
+  display: inline-block;
+  background-color: white;
+}
+.form-input input:active + label{
+  top: -8px;
+  font-size: 12px;
+  padding: 0 4px;
+  display: inline-block;
+  background-color: white;
+}
+.form-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-row-item{
+ width: 100%;
+}
+.checkbox-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2; 
+}
+.checkbox-wrap span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.184);
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  background-color: #23d2e2;
+  z-index: 1;
+}
+.checkbox-wrap span::before, 
+.checkbox-wrap span::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 3px;
+  background-color: white;
+  top: 7px;
+  left: 2px;
+  transform-origin: center;
+  transform: rotate(45deg);
+  display: block;
+}
+.checkbox-wrap span::after {
+  transform: rotate(-45deg);
+}
+.checkbox-wrap input:checked + span {
+  background-color: #fff; 
+}
+.checkbox-wrap input:checked + span::before, 
+.checkbox-wrap input:checked + span::after {
+  display: none;
+}
+.checkbox-wrap label {
+  position: absolute;
+  margin-left: 30px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+.checkbox-wrap a{
+  color: #adafca;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px; 
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+  position: relative;
+  top: 1px;
+}
+.form-btn ,.form-btn-create{
+  width: 100%;
+  padding: 25px 0;
+}
+.form-btn button,.form-btn-create button{
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+  cursor: pointer;
+  border-radius: 10px;
+  height: 54px;
+  line-height: 54px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: .875rem;
+  border: 1px solid;
+  width: 100%;
+}
+.form-btn button{
+  background-color: #615dfa;
+}
+.form-btn-create button{
+  background-color: #23d2e2;
+}
+.form-btn button:hover{
+  background-color: #5753e4;
+}
+.lined-text {
+  margin-top: 40px;
+  font-size: .875rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  color: #3e3f5e;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1em;
+}
+.lined-text:after,.lined-text:before {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background-color: #eaeaf5;
+  position: absolute;
+  top: 7px;
+}
+.lined-text:before{
+  left: 0;
+}
+.lined-text:after{
+  right: 0;
+}
+.social-link {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.social-link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5px; 
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+}
+.social-link a:hover {
+  transform:translateY(-10px); 
+}
+.social-link .fa-facebook {
+  background-color: #3763d2;
+}
+.social-link .fa-twitter {
+  background-color: #1abcff; 
+}
+.social-link .fa-twitch {
+  background-color: #7b5dfa;
+}
+.social-link .fa-youtube {
+  background-color: #fd434f; 
+}
+.social-link .fa-facebook,.fa-twitter,.fa-twitch,.fa-youtube{
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+}
+.form-create-account {
+  position: absolute;
+    width: 440px;
+    padding: 64px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+    height: 767px;
+    transform: translateX(150%);
+    transition: 1s ease-in-out;
+    transition-property: transform opacity visibility;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    top: -7px;
+}
+.form-btn-create button:hover{
+  background-color: #1bc5d4;
+}
+.form-text {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.7142857143em;
+  font-weight: 500;
+  color: #3e3f5e;
+  font-family: "Rajdhani", sans-serif;
+}
+.form-text a {
+  color: #00c7d9;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1em;
+}
+
+@media screen and (max-width: 1500px){
+  .container {
+    background-position: 0 0;
+} 
+  .landing-right{
+    display: none;
+  }
+  .container .wrapper-landing {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 141px;
+    left: 158px;
+  } 
+  .swtich {
+    margin-top: 37px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1364px){ 
+.container {
+  padding: 80px 0 100px;
+  position: static;
+  
+}
+.container .content-header {
+  display: none;
+}
+  .container .wrapper-landing {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 31px;
+  left: 131px;
+  }
+  .container .text-header {
+  position: relative;
+  top:-33px;
+  }
+  .container .textsub-header {
+  top: -74px;
+}  
+  .swtich {
+  margin-top: -81px;
+  display: flex;
+  justify-content: center;
+}
+  .container .wrapper-landing {
+    position: static;
+    display: flex;
+    flex-direction: column;
+}
+ .landing-form {
+  position: static;
+  display: flex;
+  justify-content: center;
+}
+.form-login {
+  position: static;
+  display: block;
+  margin-top: 50px;
+  transform: translateY(0);
+}
+.form-create-account {
+  transform: translateY(0);
+  position: static;
+  display: none;
+  margin-top: 50px;
+}
+.container #register:checked ~ .landing-form .form-create-account {
+  display: block;
+}
+.container #register:checked ~ .landing-form .form-login {
+  display: none;
+}
+.container #login:checked ~ .landing-form .form-btn-create {
+ display: block;
+}
+.form-login img {
+  display: none;
+}
+.form-create-account img{
+  display: none;
+}
+}
+@media screen and (max-width: 600px) {
+  .form-login{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form-login {
+  padding: 40px 32px;
+ }
+ .container .textsub-header {
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+}
+
+
+
