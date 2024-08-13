@@ -234,7 +234,7 @@ body{
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.036);
   border-radius: 5px;
   position: relative;
   cursor: pointer;
@@ -281,6 +281,9 @@ body{
   text-decoration: none;
   position: relative;
   top: 1px;
+}
+.checkbox-wrap a:hover{
+  color: #23d2e2;
 }
 .form-btn ,.form-btn-create{
   width: 100%;
@@ -498,6 +501,9 @@ body{
 }
 @media screen and (max-width: 600px) {
   .form-login{
+    width: 90%;
+  }
+  .form-create-account{
     width: 90%;
   }
 }
