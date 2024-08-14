@@ -615,7 +615,7 @@ font-weight: normal;
 }
 .header-icon{
 color: white;
-font-size: 30px;
+font-size: 25px;
 display: none;
 }
 @media screen and (max-width: 1400px){
@@ -683,6 +683,12 @@ top: 10px;
 .row{
   flex-wrap: nowrap;
 }
+.credit {
+font-size: 20px;
+}
+.credit span {
+font-size: 20px;
+}
 }
 @media screen and (max-width: 1300px){ 
 .services {
@@ -698,7 +704,6 @@ padding: 2rem 3rem;
 .services {
 padding: 100px;
 }
-
 }
 @media screen and (max-width: 1000px) {
 .services {
@@ -713,8 +718,10 @@ padding: 2rem 5%;
 .blogs {
   padding: 3rem 1%;
 }
+.review {
+  flex-wrap: nowrap; 
 }
-
+}
 @media screen and (max-width: 792px) {
 .header nav a {
 display: none;
@@ -722,14 +729,20 @@ display: none;
 .header-icon{
 display: block;
 }
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.review {
+flex-wrap: wrap;
 }
 }
-   
-@media screen and (max-width: 590px) {
-   
+.headers{
+position: relative;
+left: 15px;
 }
+.fa-gear{
+position: relative;
+right: 15px;
+}
+.banner .content-banner a, .box-footer .btn {
+font-size: 20px;
+}
+
   
