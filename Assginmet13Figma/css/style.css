@@ -62,7 +62,6 @@ body {
   max-width: 2960px;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: hidden;
 }
 
 input, button, textarea, select {
@@ -267,17 +266,20 @@ a {
     position: relative;
     right: 13px;
   }
-  .sidebar .logo-link {
-    margin-top: 35px;
-  }
-  .sidebar .logo-link img {
-    display: block;
-  }
   .header {
     width: 89vw;
     height: 8rem;
     padding: 0 20px;
     margin-bottom: 10px;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.564);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+    transition-property: opacity visibility;
   }
   .wrapper-inner {
     max-width: 93%;
@@ -286,12 +288,18 @@ a {
     grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" " main main main main" " main main main main" " main main main main" " main main main main";
   }
   .wrapper #check:checked ~ .wrapper-inner .sidebar {
-    transform: translateX(0%);
+    transform: translateX(-20%);
+    z-index: 99;
+  }
+  .wrapper #check:checked ~ .wrapper-inner .overlay {
+    opacity: 1;
+    visibility: visible;
   }
 }
 @media screen and (max-width: 858px) {
   .main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-right: 8px;
   }
   .header .nav {
     position: absolute;
@@ -309,6 +317,7 @@ a {
 @media screen and (max-width: 569px) {
   .main {
     grid-template-columns: 1fr 1fr;
+    margin-right: 8px;
   }
 }
 
