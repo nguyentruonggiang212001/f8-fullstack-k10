@@ -34,15 +34,12 @@ img {
     vertical-align: middle;
     border-style: none;
 }
-.contact, .row {
-    padding: 0;
-    margin: 0;
-}
+
 .navbar {
     position: fixed;
     right: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     padding-left: 0;
     padding-right: 0;
     min-height: 50px;
@@ -82,16 +79,11 @@ img {
         line-height: 1;
         background-color: transparent;
         border: 1px solid transparent;
-        border-radius: .25rem;
+        @include border-radius(0.25rem);
         cursor: pointer;
         color: #fff;
         display: none;
     }
-
-    // .collapse {
-    //     position: relative;
-       
-    // }
 
     .navbar-nav {
         display: flex;
@@ -185,7 +177,7 @@ img {
 
             ul li a img {
                 width: 150px;
-                border-radius: 7px;
+                @include border-radius(7px);
             }
         }
     }
@@ -252,7 +244,7 @@ img {
                 position: relative;
                 width: 135px;
                 height: 135px;
-                border-radius: 100px;
+                @include border-radius(100px);
                 background: linear-gradient(to left, #7a60ff, #cd9ffa);
                 color: #ffffff;
                 font-size: 50px;
@@ -278,7 +270,7 @@ img {
             color: #8e1efc;
             padding: 10px 40px;
             border: 2px solid #8e1efc;
-            border-radius: 7px;
+            @include border-radius(7px);
             margin-top: 30px;
             display: inline-block;
             font-size: 18px;
@@ -345,7 +337,7 @@ img {
         position: relative;
         width: 50px;
         height: 50px;
-        border-radius: 100px;
+        @include border-radius(100px);
         color: rgb(142, 30, 252);
         font-size: 18px;
         line-height: 50px;
@@ -364,7 +356,7 @@ img {
     padding: 80px 0px;
     }
     .team-detail img {
-        border-radius: 50%;
+        @include border-radius(50%);
         width: 70%;
     }
     .img-fluid {
@@ -416,7 +408,7 @@ img {
         height: 160px;
         padding: 20px;
         background-color: #f0f4ffdc;
-        border-radius: 5px;
+        @include border-radius(5px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: left;
         position: relative;
@@ -432,7 +424,7 @@ img {
             position: relative;
             width: 218px;
             height: 120px;
-            border-radius: 50%;
+            @include border-radius(50%);
             overflow: hidden;
             border: 12px solid #fff;
             left: -31px;
@@ -479,7 +471,7 @@ img {
             font-size: 1.2rem;
             color: #fff;
             border: 0.5px solid #fff;
-            border-radius: 50%;
+            @include border-radius(50%);
             padding: 0.5rem;
           }
         
@@ -512,7 +504,7 @@ img {
         height: 42px;
         padding: 0 1rem;
         background: #fff;
-        border-radius: 30px;
+        @include border-radius(30px);
         margin-bottom: 1rem;
         border: 0;
     }
@@ -522,13 +514,13 @@ img {
         height: 150px;
         background: #fff;
         border: 0;
-        border-radius: 30px;
+        @include border-radius(30px);
         margin-bottom: 1rem;
         transition: all 0.3s ease-in-out;
     }
     .contact-info {
         padding: 2rem 2rem 1rem;
-        border-radius: 8px;
+        @include border-radius(8px);
         background: #7a60ff;
         background: linear-gradient(to left, #7a60ff, #cd9ffa);
     }
@@ -565,7 +557,7 @@ img {
         padding: .7rem 2rem;
         display: inline-block;
         color: #fff;
-        border-radius: 2rem;
+        @include border-radius(2rem);
         border: 0;
        
         background: linear-gradient(to left, #7a60ff, #cd9ffa);
@@ -595,7 +587,7 @@ img {
     }
      li a img {
         width: 150px;
-        border-radius: 7px;
+        @include border-radius(7px);
         padding: 0px 5px;
     }
 }
@@ -609,6 +601,7 @@ img {
 @media screen and (max-width: 992px ){
     .navbar .navbar-toggler{
     display: block!important;
+    margin-right: 100px;
    }
    .navbar-nav{
     position: absolute;

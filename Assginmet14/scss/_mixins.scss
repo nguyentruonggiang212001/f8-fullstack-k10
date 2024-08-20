@@ -5,6 +5,7 @@
     justify-content: $justify;
 }
 
-@mixin border-radius($radius: 5px) {
+@mixin border-radius($radius) {
     border-radius: $radius;
-}
+    }
+  

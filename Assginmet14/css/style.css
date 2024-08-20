@@ -434,16 +434,11 @@ img {
   border-style: none;
 }
 
-.contact, .row {
-  padding: 0;
-  margin: 0;
-}
-
 .navbar {
   position: fixed;
   right: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding-left: 0;
   padding-right: 0;
   min-height: 50px;
@@ -951,6 +946,7 @@ img {
 @media screen and (max-width: 992px) {
   .navbar .navbar-toggler {
     display: block !important;
+    margin-right: 100px;
   }
   .navbar-nav {
     position: absolute;
