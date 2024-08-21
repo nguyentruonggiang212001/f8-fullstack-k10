@@ -878,7 +878,9 @@ img {
   border: 0;
   border-radius: 30px;
   margin-bottom: 1rem;
-  transition: all 0.3s ease-in-out;
+}
+.contact .section-content #contact_form textarea::placeholder {
+  opacity: 1;
 }
 .contact .section-content .contact-info {
   padding: 2rem 2rem 1rem;
