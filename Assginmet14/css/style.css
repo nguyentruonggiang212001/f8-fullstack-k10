@@ -964,7 +964,6 @@ img {
 @media screen and (max-width: 992px) {
   .navbar .navbar-toggler {
     display: block !important;
-    margin-right: 100px;
   }
   .navbar-nav {
     position: absolute;
