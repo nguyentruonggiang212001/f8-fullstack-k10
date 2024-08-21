@@ -3,15 +3,14 @@
 @import "variables";
 @import "mixins";
 @import "grid.scss";
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
+a{
+    text-decoration: none;
+}
 
 body {
     font-family: 'Sofia Sans', sans-serif;
@@ -24,12 +23,7 @@ input, button, textarea, select {
     border: none;
 }
 
-a {
-    text-decoration: $text-color;
-}
-a {
-    color: #5f0099;
-}
+
 img {    
     vertical-align: middle;
     border-style: none;
@@ -130,7 +124,7 @@ img {
         top: 0;
         width: 100%;
         height: 100%;
-        background: url(../scss/pattern.png);
+        background: url(../img/pattern.png);
         
     }
    
@@ -216,7 +210,6 @@ img {
             &::after {
                 content: "";
                 position: absolute;
-                
                 width: 150px;
                 height: 2px;
                 border-bottom: 2px dashed #8e1efc;
@@ -284,12 +277,12 @@ img {
     }
 }
 
-    .testimonial {
+    .feature {
     background: linear-gradient(to left, #7a60ff, #cd9ffa);
     padding: 100px 0;
     position: relative;
 
-    &.testimonial::before {
+    &.feature::before {
         content: "";
         display: block;
         position: absolute;
@@ -297,7 +290,7 @@ img {
         top: 0;
         width: 100%;
         height: 100%;
-        background: url(../scss/pattern.png);
+        background: url(../img/pattern.png);
     }
     .row{
         position: relative;
@@ -379,15 +372,14 @@ img {
         }
     }
 }
-.testimonial-sub {
-    background: #7a60ff;
+.testimonials {
+    position: relative;
+    text-align: center;
     background: linear-gradient(to left, #7a60ff, #cd9ffa);
     padding: 100px 0px;
     position: relative;
-    height: 600px;
 
-
-    &.testimonial-sub::before {
+    &.testimonials::before {
         content: "";
         display: block;
         position: absolute;
@@ -395,89 +387,99 @@ img {
         top: 0;
         width: 100%;
         height: 100%;
-        background: url(../scss/pattern.png);
+        background: url(../img/pattern.png);
     }
-    .row{
-     justify-content: center;
-    }
-    .white {
-        color: #ffffff !important;
-    }
-    .card {
-        width: 600px;
-        height: 160px;
-        padding: 20px;
-        background-color: #f0f4ffdc;
-        @include border-radius(5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        position: relative;
-       
-        margin-bottom: 100px;
-      
-        .card-content {
-          display: flex;
-          align-items: center;
-          
-      
-          .profile-picture {
-            position: relative;
-            width: 218px;
-            height: 120px;
-            @include border-radius(50%);
-            overflow: hidden;
-            border: 12px solid #fff;
-            left: -31px;
-      
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-      
-          .text-content {
-            span {
-              margin: 0;
-              font-size: 1.5em;
-              font-weight: 700;
-              color: #2d2d2d;
-            }
-      
-            .title {
-                display: block;
-                position: relative;
-                margin: 0 0 20px;
-                font-size: 1.125em;
-                line-height: 1.25;
-            }
-      
-            .description {
-               
-               
-                line-height: 1.25;
-            }
-          }
+    .line {
+        height: 2px;
+        width: 50px;
+        background: #8e1efc;
+        display: block;
+        margin: 20px auto;
+        &.line::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 2px;
+            border-bottom: 2px dashed #8e1efc;
+            margin-left: -75px;
         }
-        .icon-arrow-left {
-            position: relative;
-            right: 100px;
-          }
-          .icon-arrow-right {
-            position: relative;
-            left: 100px;
-          }
-          i {
-            font-size: 1.2rem;
-            color: #fff;
-            border: 0.5px solid #fff;
-            @include border-radius(50%);
-            padding: 0.5rem;
-          }
-        
-}
-}
+    }
 
+  
+    .container {
+      display: block;
+    }
+    .header-testimonials {
+      width: 69%;
+      margin: 0 auto;
+      h3 {
+        font-weight: 700;
+        font-size: 1.75rem;
+        color: #fff;
+      }
+     
+      p {
+        color: #fff;
+        font-size: 17px;
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+    .icon-arrow-left {
+      padding-right: 4rem;
+    }
+    .icon-arrow-right {
+      padding-left: 4rem;
+    }
+    i {
+      font-size: 1.2rem;
+      color: #fff;
+      border: 0.5px solid #fff;
+      border-radius: 50%;
+      padding: 0.5rem;
+    }
+    .content-testimonials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+    }
+    .content-testimonials .wrap-content {
+      display: flex;
+      background-color: #ebe5ff;
+      border-radius: 8px;
+      width: 70%;
+      .test-img {
+        padding: 1rem;
+      }
+      .test-img img {
+        width: 70%;
+        margin-right: 5%;
+        margin-top: 10%;
+        border: 12px solid #fff;
+        @include border-radius(50%);
+        height: auto;
+      }
+    }
+    .test-text {
+      text-align: left;
+      margin-top: 1.5rem;
+      h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      span {
+        font-size: 1.125em;
+        line-height: 1.25;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
 .contact{
     .section-padding {
         padding: 80px 0px;
@@ -570,15 +572,19 @@ img {
     padding: 100px 0px;
     position: relative;
 
-   &.download::before{
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../scss/pattern.png);
+    &.download::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/pattern.png);
     }
+
+
+
     ul {
         list-style: none;
         display: flex;
@@ -638,26 +644,15 @@ img {
     }
 
    }
-   .testimonial .single-feature {
+   .testimonials .test-text {
+    margin-bottom: 1.5rem;
+}  
+    .feature .single-feature {
     margin-left: 30px;
    }
-   .testimonial-sub .card {
-    width: 450px;
-    height: 160px;
-    }
-    .testimonial-sub .card .card-content .profile-picture {
-    top: -24px;
-    height: 90px;
-    width: 200px;
-    }
-    .fa-dollar-sign{
+   .fa-dollar-sign{
     top: -4px;
     }
-    .testimonial .text-left {
-    position: relative;
-    top: -13px;
-    }
-
 }
 @media screen and (max-width: 767px ){
     .team,.download,.footer-copy {
@@ -668,34 +663,14 @@ img {
     .feature-mobile{
         display: none;
     }
-    .testimonial-sub .card .icon-arrow-left,.testimonial-sub .card .icon-arrow-right {
-        display: none;
+    .wrap-content {
+        flex-direction: column;
     }
-    .testimonial-sub .card {
-        position: relative;
-        width: 425px;
-        height: 280px;
-        top: -46px;
+    .wrap-content .test-text {
+        text-align: center;
     }
-    .text-content{
-        position: absolute;
-        top: 154px;
-    }
-    .testimonial-sub .card .card-content .profile-picture {
-        top: -13px;
-        height: 131px;
-        width: 148px;
-        left: 120px;
-    }
-    .text-content span{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        left: -10px;
-    }
-    .text-content .title{
-        left: 138px;
-
+    .testimonials .icon-arrow-left,.testimonials .icon-arrow-right {
+       display: none;
     }
 
 }
