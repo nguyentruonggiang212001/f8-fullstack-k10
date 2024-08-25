@@ -1,0 +1,98 @@
+@use "./variables" as *;
+.products {
+  margin-top: 200px;
+  .container {
+    .content-products {
+      .product-header {
+        text-align: center;
+        h3 {
+          color: $colorText;
+          font-size: 31.667px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 41px;
+        }
+      }
+      .products-main {
+        margin-top: 50px;
+        .row {
+          justify-content: center;
+          .products-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .products-text {
+              margin-top: 17px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              h4 {
+                color: $colorText;
+                text-align: center;
+                font-size: 23px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+              .line {
+                width: 40px;
+                height: 2px;
+                background-color: #a3a3a3;
+                margin: 16px 0px;
+              }
+              p {
+                color: #656565;
+                font-size: 16.667px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21.667px;
+                margin-bottom: 10px;
+              }
+              h5 {
+                color: $colorText;
+                font-size: 16.667px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21.667px;
+                margin-bottom: 15px;
+                span {
+                  font-size: 23.333px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 26.667px;
+                }
+              }
+            }
+            .products-btn {
+              display: inline-flex;
+              padding: 13.333px 11.667px;
+              border: 1px solid transparent;
+              background: $colorPrimary;
+              cursor: pointer;
+              border-radius: 10px;
+              gap: 8.333px;
+              margin-bottom: 96px;
+              transition: ease 0.4s;
+              a {
+                color: #fff;
+                font-size: 16.667px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                text-decoration: none;
+              }
+              &:hover {
+                background-color: #fff;
+                border: 1px solid $colorPrimary;
+                a {
+                  color: $colorPrimary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+//Import gobal
+@use "partials/reset";
+@use "partials/fonts";
+@use "partials/base";
+//Import layout
+@use "partials/variables";
+@use "partials/header";
+@use "partials/main";
+@use "partials/content";
+@use "partials/_products";
+@use "partials/footer";
+@use "partials/mixin";
+//Import page

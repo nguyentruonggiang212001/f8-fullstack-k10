@@ -1,0 +1,460 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  z-index: 9999;
+}
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+header .container .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .nav img {
+  height: auto;
+  object-fit: cover;
+}
+header .container .nav .nav {
+  margin-left: auto;
+}
+header .container .nav .nav ul {
+  list-style: none;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+header .container .nav .nav ul li {
+  font-family: "Inter";
+  font-size: 16.667px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.667px;
+}
+header .container .nav .nav ul a {
+  display: inline-block;
+  padding: 2rem 0;
+  text-decoration: none;
+  color: #2c2c2c;
+}
+header .container .nav .nav ul a:hover {
+  transition: 0.4 ease;
+  border-bottom: 2px solid green;
+}
+header .container .nav .nav ul .link {
+  color: green;
+  border-bottom: 2px solid green;
+}
+header .container .nav .nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .nav .nav-icon img {
+  width: 25px;
+  height: 22.283px;
+  margin-left: 50px;
+}
+header .container .nav .nav-icon-sub {
+  width: 25px;
+  height: 22.283px;
+  margin-left: 50px;
+}
+header .container .nav .bar {
+  margin-left: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+.main {
+  margin-top: 88px;
+  overflow: hidden;
+}
+.main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+.main .container .main-sub {
+  position: relative;
+  z-index: 100;
+}
+.main .container .main-sub .row {
+  align-items: center;
+}
+.main .container .main-sub .row .text h2 {
+  color: #2c2c2c;
+  font-family: "Inter";
+  font-size: 36.667px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 131.523%;
+}
+.main .container .main-sub .row .text h3 {
+  color: #2c2c2c;
+  font-family: "Inter";
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 2.7rem;
+  margin-right: 200px;
+}
+.main .container .main-sub .row .text p {
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.417px;
+  margin-top: 27px;
+}
+.main .container .main-sub .row .main-image {
+  position: relative;
+  background: #dcffca;
+  width: 775.833px;
+  height: 708.333px;
+  border-radius: 16.667px 0px 0px 16.667px;
+}
+.main .container .main-sub .row .main-image .wrapper--image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -16%;
+  z-index: 9;
+}
+.main .container .main-sub .row .main-image .banner--title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 32%;
+  rotate: 90deg;
+  transform-origin: top;
+}
+.main .container .main-sub .row .main-image .banner--title span {
+  color: #216000;
+  font-size: 166.667px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+  opacity: 0.15;
+}
+
+.content {
+  margin-top: 200px;
+}
+.content .container {
+  position: relative;
+}
+.content .container .section-header {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.content .container .section-header h3 {
+  color: #2c2c2c;
+  font-family: "Inter";
+  font-size: 31.667px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 41.649px;
+  margin-bottom: 24px;
+}
+.content .container .section-header p {
+  color: var(--Content, #2c2c2c);
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.417px;
+}
+.content .container .section-content {
+  position: relative;
+  margin-top: 115px;
+  text-align: left;
+  padding: 3rem 14%;
+}
+.content .container .section-content .row .box-content {
+  position: absolute;
+  top: -91px;
+  left: 40px;
+  width: 235px;
+  height: 235px;
+}
+.content .container .section-content .box-content-footer {
+  position: relative;
+  top: -90px;
+  left: 126px;
+  width: 235px;
+  height: 235px;
+}
+.content .container .section-content .icon-box {
+  position: relative;
+  border-radius: 3.333px;
+  background: #fff;
+  box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
+  padding: 100px 20px;
+  z-index: 99;
+}
+.content .container .section-content .icon-box.center {
+  position: relative;
+  padding: 120px 30px;
+  top: -20px;
+}
+.content .container .section-content .icon-box img.box {
+  position: relative;
+  top: -84px;
+  border-radius: 10px;
+  background: #fff0e7;
+  padding: 20px;
+  z-index: 1;
+}
+.content .container .section-content .icon-box img.box.center {
+  background-color: #f2ffec;
+}
+.content .container .section-content .icon-box .icon-box img {
+  width: 83.333px;
+  height: 83.333px;
+  border-radius: 10px;
+  background: #fff0e7;
+  z-index: 999;
+}
+.content .container .section-content .icon-box h3 {
+  color: #2c2c2c;
+  font-family: "Inter";
+  font-size: 43.333px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.content .container .section-content .icon-box p {
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.833px;
+}
+
+.products {
+  margin-top: 100px;
+}
+.products .container {
+  position: relative;
+}
+.products h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Inter";
+  font-size: 31.667px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 131.523%;
+}
+.products .section-content {
+  position: relative;
+  text-align: center;
+}
+.products .section-content .box-content {
+  position: relative;
+  top: -124px;
+}
+.products .section-content h2 {
+  text-align: center;
+  font-family: "Inter";
+  font-size: 23.333px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 12px;
+  display: flex;
+  height: 56.667px;
+  padding: 0px 44.333px 0.667px 44px;
+  justify-content: center;
+  align-items: center;
+}
+.products .section-content .line {
+  height: 1px;
+  width: 50px;
+  background: #a3a3a3;
+  display: block;
+  margin: 12px auto;
+}
+.products .section-content h4 {
+  color: #656565;
+  font-family: "Inter";
+  font-size: 16.667px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.667px;
+}
+
+@media screen and (max-width: 992px) {
+  .bar {
+    display: block !important;
+  }
+  header .container .nav .nav ul {
+    position: fixed;
+    display: block;
+    top: 75px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    width: 350px;
+    text-align: center;
+    height: 100vw;
+    padding: 20px;
+    transform: translateX(-400px);
+    transition: ease 0.4s;
+    transition-property: translate;
+  }
+  header .container .nav .nav ul .link {
+    color: black;
+    border: none;
+  }
+  header #check:checked ~ .container .nav .nav ul {
+    transform: translateX(0px);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

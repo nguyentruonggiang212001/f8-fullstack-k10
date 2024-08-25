@@ -1,0 +1,68 @@
+@use "./variables" as *;
+.main {
+  margin-top: 88px;
+  overflow: hidden;
+
+  .main-sub {
+    position: relative;
+    z-index: 100;
+    .row {
+      align-items: center;
+      .text {
+        h2 {
+          color: $colorText;
+          font-size: 36.667px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 48px;
+        }
+        h3 {
+          color: $colorText;
+          font-size: 43px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: normal;
+          margin-bottom: 27px;
+          margin-right: 200px;
+        }
+        p {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20.417px;
+          margin-right: 130px;
+        }
+      }
+      .main-image {
+        position: relative;
+        background: #dcffca;
+        width: 775.833px;
+        height: 708.333px;
+        border-radius: 16.667px 0px 0px 16.667px;
+        .image {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -18%;
+          z-index: 10;
+        }
+        .main-text {
+          position: absolute;
+          transform-origin: top;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 38%;
+          rotate: 90deg;
+        }
+        .main-text span {
+          color: #216000;
+          font-size: 166.667px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 100%;
+          opacity: 0.15;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .main .main-sub .row .main-image .main-text {
+    left: 16%;
+    z-index: 10;
+  }
+
+  .main .main-sub .row .text h3 {
+    margin-right: 0;
+  }
+  .box-content,
+  .box-content-footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 992.98px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .text {
+    text-align: center;
+  }
+  .bar {
+    display: block !important;
+  }
+
+  header .container .nav .nav-sub ul {
+    position: fixed;
+    display: block;
+    top: 75px;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    transform: translate(400px);
+    transition: ease 0.4s;
+    z-index: 99;
+  }
+  header #check {
+    &:checked {
+      & ~ .container {
+        .nav {
+          .nav-sub {
+            ul {
+              transform: translate(0px);
+            }
+          }
+          .overlay {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .main .main-sub .row .text p {
+    margin-right: 0px;
+  }
+  .main .main-sub .row .main-image {
+    width: 100%;
+    border-radius: 16px;
+    .image {
+      left: 14%;
+      z-index: 10;
+    }
+    .main-text {
+      left: 20%;
+    }
+  }
+  .content .row .section-content .icon-box.center {
+    top: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .main .main-sub .row .main-image {
+    width: 100%;
+    height: 30rem;
+    .image img {
+      width: 90%;
+    }
+    .main-text {
+      rotate: 0deg;
+    }
+    .main-text span {
+      font-size: 100px;
+    }
+    .main-text {
+      left: 26%;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .main .main-sub .row .main-image {
+    height: 20rem;
+    .main-text {
+      left: 32%;
+    }
+    .image {
+      left: 12%;
+    }
+    .main-text span {
+      font-size: 50px;
+    }
+  }
+  .content .row .section-content .icon-box {
+    text-align: center;
+  }
+}
