@@ -32,12 +32,6 @@ Responsive (Xây dựng theo Moblie First)
 }
 
 .container {
-  max-width: var(--container-width);
-  margin-inline: auto;
-  padding: 0 var(--container-padding);
-}
-
-.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;

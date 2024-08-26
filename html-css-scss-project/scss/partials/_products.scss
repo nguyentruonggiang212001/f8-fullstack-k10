@@ -30,10 +30,17 @@
               h4 {
                 color: $colorText;
                 text-align: center;
+                font-family: "Inter";
                 font-size: 23px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
+                &:hover {
+                  color: $colorPrimary;
+                }
+                span {
+                  display: block;
+                }
               }
               .line {
                 width: 40px;
@@ -83,7 +90,7 @@
                 text-decoration: none;
               }
               &:hover {
-                background-color: #fff;
+                background-color: $backGroundWhite;
                 border: 1px solid $colorPrimary;
                 a {
                   color: $colorPrimary;

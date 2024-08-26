@@ -2,12 +2,16 @@
 @use "partials/reset";
 @use "partials/fonts";
 @use "partials/base";
-//Import layout
 @use "partials/variables";
+//Import layout
 @use "partials/header";
 @use "partials/main";
 @use "partials/content";
 @use "partials/_products";
+@use "partials/news";
+@use "partials/card";
+@use "partials/beneficial";
+@use "partials/contact";
 @use "partials/footer";
 @use "partials/mixin";
 //Import page

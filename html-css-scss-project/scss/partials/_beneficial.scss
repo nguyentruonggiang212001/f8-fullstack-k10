@@ -1,0 +1,40 @@
+@use "./variables" as *;
+.beneficial {
+  margin-top: 133px;
+  .container {
+    .row {
+      justify-content: center;
+      .row {
+        .beneficial-content {
+          display: flex;
+          gap: 15px;
+          padding: 0 18px;
+          .beneficial-image {
+            img {
+              width: 57px;
+              height: 57px;
+            }
+          }
+          .beneficial-text {
+            h3 {
+              color: $colorText;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 26.667px;
+              margin-bottom: 6px;
+            }
+            p {
+              color: $colorText;
+              font-size: 17px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

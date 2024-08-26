@@ -1,21 +1,72 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200.98px) {
   .container {
     padding: 0 2rem;
   }
-  .main .main-sub .row .main-image .main-text {
-    left: 16%;
-    z-index: 10;
+  .main {
+    .main-sub {
+      .row {
+        .main-image {
+          .main-text {
+            left: 16%;
+            z-index: 10;
+          }
+        }
+      }
+    }
   }
-
-  .main .main-sub .row .text h3 {
-    margin-right: 0;
+  .main {
+    .main-sub {
+      .row {
+        .text h3 {
+          margin-right: 0;
+        }
+      }
+    }
   }
-  .box-content,
-  .box-content-footer {
-    display: none;
+  .content {
+    .row {
+      .section-content {
+        .row {
+          .box-content {
+            position: absolute;
+            top: -78px;
+            left: 25px;
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+  .content .row {
+    .section-content {
+      .box-content-footer {
+        position: relative;
+        top: -90px;
+        left: 178px;
+        width: 150px;
+        height: 150px;
+      }
+    }
   }
 }
-@media screen and (max-width: 992.98px) {
+@media screen and (max-width: 1199.98px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .footer {
+    .container {
+      .row {
+        .footer-header {
+          .row {
+            justify-content: left;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
   .container {
     padding: 0 2rem;
   }
@@ -25,21 +76,36 @@
   .bar {
     display: block !important;
   }
-
-  header .container .nav .nav-sub ul {
-    position: fixed;
-    display: block;
-    top: 75px;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    width: 200px;
-    text-align: center;
-    height: 100vh;
-    padding: 20px;
-    transform: translate(400px);
-    transition: ease 0.4s;
-    z-index: 99;
+  .box-content,
+  .box-content-footer {
+    display: none;
+  }
+  header {
+    .container {
+      .nav {
+        .nav-sub ul {
+          position: fixed;
+          display: block;
+          top: 75px;
+          top: 0;
+          right: 0;
+          background-color: #fff;
+          width: 200px;
+          text-align: center;
+          height: 100vh;
+          padding: 20px;
+          transform: translate(400px);
+          transition: ease 0.4s;
+          z-index: 99;
+          a {
+            padding: 1rem 0;
+          }
+        }
+        .nav-icon-sub {
+          margin-left: 20px;
+        }
+      }
+    }
   }
   header #check {
     &:checked {
@@ -48,6 +114,7 @@
           .nav-sub {
             ul {
               transform: translate(0px);
+              text-align: left;
             }
           }
           .overlay {
@@ -58,25 +125,74 @@
       }
     }
   }
-  .main .main-sub .row .text p {
-    margin-right: 0px;
-  }
-  .main .main-sub .row .main-image {
-    width: 100%;
-    border-radius: 16px;
-    .image {
-      left: 14%;
-      z-index: 10;
-    }
-    .main-text {
-      left: 20%;
+  .main {
+    .main-sub {
+      .row {
+        .text p {
+          margin-right: 0px;
+        }
+      }
     }
   }
-  .content .row .section-content .icon-box.center {
-    top: 0px;
+  .main {
+    .main-sub {
+      .row {
+        .main-image {
+          width: 100%;
+          border-radius: 16px;
+          .image {
+            left: 14%;
+            z-index: 10;
+          }
+          .main-text {
+            left: 20%;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    .row {
+      .section-content {
+        .icon-box {
+          margin-left: 0px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .content {
+    .row {
+      .section-content {
+        .icon-box.center {
+          top: 0px;
+        }
+      }
+    }
+  }
+  .card {
+    .card-footer {
+      height: 101%;
+    }
+  }
+  .contact {
+    .container {
+      .row {
+        justify-content: center;
+        .contact-image {
+          img {
+            position: relative;
+            opacity: 0.75;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .container {
     padding: 0 2rem;
   }
@@ -96,24 +212,104 @@
       left: 26%;
     }
   }
+  .products-image {
+    img {
+      height: 300px;
+    }
+  }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576.98px) {
   .container {
     padding: 0 2rem;
   }
-  .main .main-sub .row .main-image {
-    height: 20rem;
-    .main-text {
-      left: 32%;
-    }
-    .image {
-      left: 12%;
-    }
-    .main-text span {
-      font-size: 50px;
+  .main {
+    .main-sub {
+      .row {
+        .text {
+          h2 {
+            font-size: 32px;
+          }
+          h3 {
+            font-size: 38px;
+          }
+        }
+        .main-image {
+          height: 20rem;
+          .main-text {
+            left: 32%;
+          }
+          .image {
+            left: 12%;
+          }
+          .main-text span {
+            font-size: 50px;
+          }
+        }
+      }
     }
   }
-  .content .row .section-content .icon-box {
-    text-align: center;
+  .content {
+    .row {
+      .section-content {
+        .icon-box {
+          text-align: center;
+          img.box {
+            right: 10px;
+          }
+          h3 {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+  .news {
+    .container {
+      .news-main {
+        .row {
+          .news-image {
+            height: 385px;
+          }
+        }
+      }
+    }
+  }
+  .card {
+    .card-sub {
+      .card-main {
+        .row {
+          .card-content {
+            .card-image img {
+              height: 250px;
+            }
+            .card-text {
+              padding: 24px 0px 54px 27px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .container {
+      .row {
+        .footer-media {
+          display: block;
+          .footer-image {
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 10px;
+            }
+          }
+          .footer-sub {
+            ul {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -15,7 +15,6 @@
       line-height: 41.649px;
       margin-bottom: 24px;
     }
-
     p {
       color: $colorText;
       font-size: 16px;
@@ -32,7 +31,7 @@
       .row .box-content {
         position: absolute;
         top: -115px;
-        left: 4px;
+        left: -15px;
         width: 235px;
         height: 235px;
       }
@@ -46,16 +45,14 @@
       .icon-box {
         position: relative;
         border-radius: 3.333px;
-        background: #fff;
+        background: $backGroundWhite;
         box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
         padding: 60px 0px 60px 20px;
         z-index: 99;
-
         &.center {
           padding: 100px 0px 100px 20px;
           top: -40px;
         }
-
         img.box {
           position: relative;
           top: -37px;
@@ -63,12 +60,10 @@
           background: #fff0e7;
           padding: 20px;
           z-index: 20;
-
           &.center {
             background-color: #f2ffec;
           }
         }
-
         .icon-box img {
           width: 83.333px;
           height: 83.333px;
@@ -76,7 +71,6 @@
           background: #fff0e7;
           z-index: 999;
         }
-
         h3 {
           color: $colorText;
           font-size: 43.333px;
@@ -84,7 +78,6 @@
           font-weight: 800;
           line-height: normal;
         }
-
         p {
           font-size: 20px;
           font-style: normal;
