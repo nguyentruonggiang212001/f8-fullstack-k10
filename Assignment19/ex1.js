@@ -12,6 +12,7 @@ function calculateTaxiBill(km) {
   if (km > 120) {
     bill *= 0.9;
   }
+  return bill;
 }
 
 const km = Number(prompt("Nhập số km"));
