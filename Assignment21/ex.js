@@ -1,5 +1,4 @@
 //Bài 1
-
 function createCustomers(customers) {
   for (let i = 0; i < customers.length - 1; i++) {
     for (let j = 0; j < customers.length - i - 1; j++) {
@@ -29,7 +28,7 @@ const result = createCustomers(customers);
 
 console.log(result);
 
-//bài 2
+// bài 2
 
 const users = [];
 
@@ -54,6 +53,7 @@ function login(email, password) {
 
   return "Thông tin đăng nhập không hợp lệ!";
 }
+
 console.log(register("Hoang", "12345", "hoangnm@gmail.com"));
 console.log(register("An", "00000", "hoangan@gmail.com"));
 console.log(login("hoangan@gmail.com", "00000"));
