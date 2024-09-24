@@ -41,18 +41,9 @@ function dataCleanup(arr) {
   const invalidData = [];
 
   for (const user of arr) {
-    const nameEmpty = user.name === "";
-    const nameValid = typeof user.name === "string" && !nameEmpty;
-
-    const ageNull = user.age === null;
-    const ageUndefined = user.age === undefined;
-    const ageNaN = isNaN(user.age);
+    const nameValid = typeof user.name === "string" && user.name !== "";
     const ageValid =
-      !ageNull &&
-      !ageUndefined &&
-      !ageNaN &&
-      typeof user.age === "number" &&
-      user.age > 0;
+      typeof user.age === "number" && user.age > 0 && !isNaN(user.age);
 
     if (nameValid && ageValid) {
       validData.push(user);
