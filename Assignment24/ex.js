@@ -1,4 +1,3 @@
-//Bài1
 const students = [
   { id: 1, name: "Nguyen Manh Huy", age: 18 },
   { id: 2, name: "Nguyen Thanh An", age: 18 },
@@ -17,29 +16,33 @@ const students = [
   { id: 15, name: "Nhung", age: 18 },
   { id: 16, name: "Nguyễn Nhung", age: 18 },
 ];
-const result = students.sort((a, b) => {
-  const nameA = a.name.split(" ").slice(-1);
-  const nameB = b.name.split(" ").slice(-1);
 
+const result = students.sort((a, b) => {
+  const nameA = a.name.split(" ").slice(-1).join("");
+  const nameB = b.name.split(" ").slice(-1).join("");
+
+  let result;
   if (nameA > nameB) {
-    return 1;
+    result = 1;
   } else if (nameA < nameB) {
-    return -1;
+    result = -1;
   } else {
     const familyNameA = a.name.split(" ").slice(0, -1).join(" ");
     const familyNameB = b.name.split(" ").slice(0, -1).join(" ");
+
     if (familyNameA > familyNameB) {
-      return 1;
+      result = 1;
     } else if (familyNameA < familyNameB) {
-      return -1;
+      result = -1;
     } else {
-      return 0;
+      result = 0;
     }
   }
+
+  return result;
 });
 
 console.log(result);
-
 //Bài 2
 const informationStudent = result.map((student) => {
   const newStudent = {
