@@ -41,6 +41,7 @@ const menu = [
   },
 ];
 //Bài1
+// test
 function createMenu(menu) {
   let menuMain = '<ul id="main-menu">';
 
