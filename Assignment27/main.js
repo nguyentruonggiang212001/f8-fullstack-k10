@@ -40,7 +40,7 @@ const menu = [
     parentId: 4,
   },
 ];
-//bài1
+//Bài1
 function createMenu(menu) {
   let menuMain = '<ul id="main-menu">';
 
@@ -105,7 +105,7 @@ const cart = [
     hotSale: true,
   },
 ];
-//bài 2
+//Bài 2
 function renderOrder(cart) {
   let total = 0;
   let rowsTable = [];
@@ -149,7 +149,7 @@ function renderOrder(cart) {
 
 document.body.innerHTML += renderOrder(cart);
 
-//bài 3
+//Bài 3
 function countElements(tagName) {
   if (typeof tagName !== "string") {
     return "tagName phải là một chuỗi ";
