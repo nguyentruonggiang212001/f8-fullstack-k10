@@ -4,10 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      button {
+        padding: 5px 10px;
+        cursor: pointer;
+        background-color: blue;
+        border-radius: 10px;
+        border: none;
+        color: white;
+      }
+    </style>
   </head>
   <body>
-    <ul>
-      <li><a href="./ex.html">BTVN</a></li>
-    </ul>
+    <button id="sortPriority">Priority sort</button>
+    <button id="filterCompleted">Completed</button>
+    <button id="filterDoing">Doing</button>
+    <button id="reset">Reset</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Priority</th>
+          <th>Completed</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="todos"></tbody>
+    </table>
+    <script src="./main.js"></script>
   </body>
 </html>

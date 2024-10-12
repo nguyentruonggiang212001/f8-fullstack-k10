@@ -50,9 +50,12 @@ function createMenu(menu) {
       menuMain += `<li><a href="#" style="font-size: 24px;text-decoration: none;color: black;">${item.name}</a>`;
       let menuBody = "";
       let subMenu = false;
+
       menu.forEach((subItem) => {
         if (subItem.parentId === item.id) {
           subMenu = true;
+          console.log(subItem);
+          console.log(item.id);
           menuBody += `<li><a href="#" style="font-size: 20px; text-decoration: none;color: black;">${subItem.name}</a></li>`;
         }
       });
