@@ -12,67 +12,93 @@ function renderTable(list) {
   tbody.innerHTML = "";
   list.forEach((todo) => {
     const tr = document.createElement("tr");
+    tr.appendChild(createContentCell(todo));
+    tr.appendChild(createPriorityCell(todo));
+    tr.appendChild(createCompletedCell(todo));
+    tr.appendChild(createActionCell(todo));
 
-    const tdContent = document.createElement("td");
-    tdContent.innerText = todo.content;
-
-    const tdPriority = document.createElement("td");
-    tdPriority.innerText = todo.priority;
-
-    const tdCompleted = document.createElement("td");
-    const btnCompleted = document.createElement("button");
-    btnCompleted.innerText = todo.completed ? "Completed" : "Doing";
-    btnCompleted.style.backgroundColor = todo.completed ? "green" : "red";
-
-    btnCompleted.addEventListener("click", () => {
-      todo.completed = !todo.completed;
-      renderTable(activeTodos);
-    });
-    tdCompleted.appendChild(btnCompleted);
-
-    const tdAction = document.createElement("td");
-    const btnDelete = document.createElement("button");
-    btnDelete.innerText = "Delete";
-    btnDelete.addEventListener("click", () => {
-      if (confirm("Bạn có chắc chắn muốn xóa công việc này không?")) {
-        activeTodos = activeTodos.filter((item) => item.id !== todo.id);
-        renderTable(activeTodos);
-      }
-    });
-    tdAction.appendChild(btnDelete);
-
-    tr.appendChild(tdContent);
-    tr.appendChild(tdPriority);
-    tr.appendChild(tdCompleted);
-    tr.appendChild(tdAction);
     tbody.appendChild(tr);
   });
+}
+
+function createContentCell(todo) {
+  const tdContent = document.createElement("td");
+  tdContent.innerText = todo.content;
+  return tdContent;
+}
+
+function createPriorityCell(todo) {
+  const tdPriority = document.createElement("td");
+  tdPriority.innerText = todo.priority;
+  return tdPriority;
+}
+
+function createCompletedCell(todo) {
+  const tdCompleted = document.createElement("td");
+  const btnCompleted = document.createElement("button");
+  if (todo.completed) {
+    btnCompleted.innerText = "Completed";
+    btnCompleted.style.backgroundColor = "green";
+  } else {
+    btnCompleted.innerText = "Doing";
+    btnCompleted.style.backgroundColor = "red";
+  }
+  btnCompleted.addEventListener("click", () => {
+    todo.completed = !todo.completed;
+    renderTable(activeTodos);
+  });
+  tdCompleted.appendChild(btnCompleted);
+  return tdCompleted;
+}
+
+function createActionCell(todo) {
+  const tdAction = document.createElement("td");
+  const btnDelete = document.createElement("button");
+  btnDelete.innerText = "Delete";
+  btnDelete.addEventListener("click", () => {
+    if (confirm("Bạn có chắc chắn muốn xóa công việc này không?")) {
+      activeTodos = activeTodos.filter((item) => item.id !== todo.id);
+      renderTable(activeTodos);
+    }
+  });
+  tdAction.appendChild(btnDelete);
+  return tdAction;
 }
 
 function sortTodos() {
   activeTodos.sort((a, b) => b.priority - a.priority);
   renderTable(activeTodos);
 }
-document.querySelector("#sortPriority").addEventListener("click", sortTodos);
+document.getElementById("sortPriority").addEventListener("click", sortTodos);
 
 function filterCompleted() {
-  const completedTodos = activeTodos.filter((todo) => todo.completed);
+  const completedTodos = [];
+  for (const todo of activeTodos) {
+    if (todo.completed) {
+      completedTodos.push(todo);
+    }
+  }
   renderTable(completedTodos);
 }
 document
-  .querySelector("#filterCompleted")
+  .getElementById("filterCompleted")
   .addEventListener("click", filterCompleted);
 
 function filterDoing() {
-  const doingTodos = activeTodos.filter((todo) => !todo.completed);
+  const doingTodos = [];
+  for (const todo of activeTodos) {
+    if (!todo.completed) {
+      doingTodos.push(todo);
+    }
+  }
   renderTable(doingTodos);
 }
-document.querySelector("#filterDoing").addEventListener("click", filterDoing);
+document.getElementById("filterDoing").addEventListener("click", filterDoing);
 
 function resetTodos() {
-  activeTodos = [...todos];
+  activeTodos = todos.slice();
   renderTable(activeTodos);
 }
-document.querySelector("#reset").addEventListener("click", resetTodos);
+document.getElementById("reset").addEventListener("click", resetTodos);
 
 renderTable(activeTodos);
