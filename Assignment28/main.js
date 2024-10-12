@@ -10,15 +10,15 @@ let activeTodos = todos.slice();
 function renderTable(list) {
   const tbody = document.getElementById("todos");
   tbody.innerHTML = "";
-  list.forEach((todo) => {
+  for (const todo of list) {
     const tr = document.createElement("tr");
     tr.appendChild(createContentCell(todo));
     tr.appendChild(createPriorityCell(todo));
     tr.appendChild(createCompletedCell(todo));
     tr.appendChild(createActionCell(todo));
 
-    tbody.appendChild(tr);
-  });
+    tbody.appendChild(tr); // Thêm hàng mới vào tbody
+  }
 }
 
 function createContentCell(todo) {
