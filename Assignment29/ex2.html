@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: green;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #error-message {
+        margin-top: 10px;
+        font-size: 14px;
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="register" action="" method="POST">
+      <div class="form-group">
+        <label for="fullname">Họ và tên</label>
+        <input type="text" onchange="getFormInfo()" name="fullname" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" onchange="getFormInfo()" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Mật khẩu</label>
+        <input type="password" onchange="getFormInfo()" name="password" />
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Xác nhận mật khẩu</label>
+        <input
+          type="password"
+          onchange="getFormInfo()"
+          name="confirmPassword"
+        />
+      </div>
+      <div class="form-group">
+        <label for="gender">Giới tính</label>
+        <select name="gender" id="" onchange="getFormInfo()">
+          <option value="other">LGBT???</option>
+          <option value="male">Nam</option>
+          <option value="female">Nữ</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Register" />
+      </div>
+      <div id="error-message"></div>
+    </form>
+    <script src="./ex2.js"></script>
+  </body>
+</html>

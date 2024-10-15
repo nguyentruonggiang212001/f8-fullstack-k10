@@ -17,7 +17,7 @@ function renderTable(list) {
     tr.appendChild(createCompletedCell(todo));
     tr.appendChild(createActionCell(todo));
 
-    tbody.appendChild(tr); // Thêm hàng mới vào tbody
+    tbody.appendChild(tr);
   }
 }
 
@@ -72,12 +72,7 @@ function sortTodos() {
 document.getElementById("sortPriority").addEventListener("click", sortTodos);
 
 function filterCompleted() {
-  const completedTodos = [];
-  for (const todo of activeTodos) {
-    if (todo.completed) {
-      completedTodos.push(todo);
-    }
-  }
+  const completedTodos = activeTodos.filter((todo) => todo.completed);
   renderTable(completedTodos);
 }
 document
@@ -85,12 +80,7 @@ document
   .addEventListener("click", filterCompleted);
 
 function filterDoing() {
-  const doingTodos = [];
-  for (const todo of activeTodos) {
-    if (!todo.completed) {
-      doingTodos.push(todo);
-    }
-  }
+  const doingTodos = activeTodos.filter((todo) => !todo.completed);
   renderTable(doingTodos);
 }
 document.getElementById("filterDoing").addEventListener("click", filterDoing);
