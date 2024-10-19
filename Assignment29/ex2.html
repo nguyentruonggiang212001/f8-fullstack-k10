@@ -62,27 +62,23 @@
     <form id="register" action="" method="POST">
       <div class="form-group">
         <label for="fullname">Họ và tên</label>
-        <input type="text" onchange="getFormInfo()" name="fullname" />
+        <input type="text" name="fullname" />
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" onchange="getFormInfo()" name="email" />
+        <input type="email" name="email" />
       </div>
       <div class="form-group">
         <label for="password">Mật khẩu</label>
-        <input type="password" onchange="getFormInfo()" name="password" />
+        <input type="password" name="password" />
       </div>
       <div class="form-group">
         <label for="confirmPassword">Xác nhận mật khẩu</label>
-        <input
-          type="password"
-          onchange="getFormInfo()"
-          name="confirmPassword"
-        />
+        <input type="password" name="confirmPassword" />
       </div>
       <div class="form-group">
         <label for="gender">Giới tính</label>
-        <select name="gender" id="" onchange="getFormInfo()">
+        <select name="gender">
           <option value="other">LGBT???</option>
           <option value="male">Nam</option>
           <option value="female">Nữ</option>
