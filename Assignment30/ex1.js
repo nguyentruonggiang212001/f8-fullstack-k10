@@ -66,14 +66,14 @@ function renderTodo(datas) {
   }
 }
 
-// Hàm kiểm tra tính hợp lệ của công việc cần thêm
+// Hàm kiểm tra công việc có hợp lệ không
 function validTodo(title, description) {
   if (title === "" || description === "") {
     return false;
   }
   return true;
 }
-
+//Hàm mô tả công việc
 function createTodo(title, description) {
   return {
     id: generateRandomID(12),
@@ -87,42 +87,31 @@ function addTodo(event) {
   event.preventDefault();
   const title = document.getElementById("title").value;
   const description = document.getElementById("description").value;
-
-  // Kiểm tra tính hợp lệ của tiêu đề và mô tả
   if (!title || !description) {
     alert("Title và description không được để trống!");
     return;
   }
-
   if (idEditing) {
-    // Cập nhật công việc đang chỉnh sửa
     for (const todo of todos) {
       if (todo.id === idEditing) {
-        // Cập nhật các thuộc tính của công việc đang chỉnh sửa
-        todo.title = title; // Cập nhật tiêu đề
-        todo.description = description; // Cập nhật mô tả
-        // Giữ nguyên ID và trạng thái
-        break; // Thoát khỏi vòng lặp khi đã cập nhật
+        todo.title = title;
+        todo.description = description;
+        break;
       }
     }
-
-    // Reset ID đang chỉnh sửa và thông tin công việc
     resetEditingState();
   } else {
-    // Thêm công việc mới bằng hàm createTodo
     todos.push(createTodo(title, description));
   }
-
-  // Lưu danh sách todos vào localStorage và hiển thị lại
   handleLocalStorage(todos);
   renderTodo(todos);
   resetForm();
 }
 
-// Hàm để reset trạng thái chỉnh sửa
+// Hàm để reset trạng thái
 function resetEditingState() {
-  idEditing = null; // Đặt lại ID đang chỉnh sửa
-  todoEditing = {}; // Đặt lại thông tin công việc
+  idEditing = null;
+  todoEditing = {};
 }
 
 // Hàm xóa công việc
@@ -143,28 +132,21 @@ function removeTodo(id) {
   }
 }
 
-// Hàm cập nhật thông tin công việc (đưa vào form để chỉnh sửa)
+// Hàm cập nhật thông tin công việc
 function updateTodo(id) {
-  let found = false; // Biến cờ để theo dõi việc tìm thấy công việc
-
+  let found = false;
   todos.forEach((todo) => {
     if (todo.id === id && !found) {
-      // Gán các thuộc tính của công việc tìm được sang todoEditing
       todoEditing = {
         id: todo.id,
         title: todo.title,
         description: todo.description,
         status: todo.status,
       };
-
-      // Gán giá trị tiêu đề và mô tả vào form để chỉnh sửa
       titleEle.value = todo.title;
       descriptionEle.value = todo.description;
-
-      // Lưu lại ID của công việc đang chỉnh sửa
       idEditing = todo.id;
-
-      found = true; // Đánh dấu là đã tìm thấy công việc
+      found = true;
     }
   });
 }
@@ -172,11 +154,9 @@ function updateTodo(id) {
 // Hàm reset form
 const inputFields = [titleEle, descriptionEle];
 function resetForm() {
-  // Duyệt qua từng trường và đặt giá trị thành rỗng
   inputFields.forEach(function (input) {
-    input.value = ""; // Reset giá trị của từng trường
+    input.value = "";
   });
-  // Đặt lại ID đang chỉnh sửa
   idEditing = null;
 }
 
@@ -192,7 +172,6 @@ function toggleStatus(id) {
   renderTodo(todos);
 }
 
-// Khởi tạo hiển thị danh sách todos
 renderTodo(todos);
 
 // Gắn sự kiện cho form và nút reset
