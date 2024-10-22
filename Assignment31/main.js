@@ -11,7 +11,16 @@ fetch("http://localhost:3000/todos")
     todos = data;
     filter();
   });
-
+function generateRandomID(n) {
+  let characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let id = "todo-";
+  for (let i = 0; i < n; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    id += characters[randomIndex];
+  }
+  return id;
+}
 // Hàm hiển thị todos lên màn hình
 function renderTodos(todos) {
   tbody.innerHTML = "";
@@ -29,27 +38,6 @@ function renderTodos(todos) {
         </button>
       </td>
     `;
-    const statusButton = tr.querySelector(".status-btn");
-    statusButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      item.status = !item.status;
-      fetch(`http://localhost:3000/todos/${item.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: item.id,
-          title: item.title,
-          description: item.description,
-          status: item.status,
-        }),
-      })
-        .then((response) => response.json())
-        .then(() => {
-          filterTodos();
-        });
-    });
     tbody.appendChild(tr);
   });
 }
@@ -62,24 +50,6 @@ function addTodo() {
     alert("Title và description không được để trống!");
     return;
   }
-  // Tìm ID lớn nhất hiện tại và cộng thêm 1
-  let newId;
-  if (todos.length > 0) {
-    let maxId = 0;
-
-    for (let todo of todos) {
-      const todoId = parseInt(todo.id, 10);
-
-      if (todoId > maxId) {
-        maxId = todoId;
-      }
-    }
-
-    newId = maxId + 1;
-  } else {
-    newId = 1;
-  }
-  // Gán trạng thái ngẫu nhiên
   let status;
   if (Math.random() < 0.5) {
     status = true;
@@ -87,7 +57,7 @@ function addTodo() {
     status = false;
   }
   const newTodo = {
-    id: newId,
+    id: generateRandomID(2),
     title,
     description,
     status,
