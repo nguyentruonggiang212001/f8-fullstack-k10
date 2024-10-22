@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style1.css" />
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <form id="addTodoForm">
+      <input type="text" id="title" placeholder="Title" />
+      <input type="text" id="description" placeholder="Description" />
+      <button type="submit">Add Todo</button>
+    </form>
+    <div class="filter">
+      <span>Filter status:</span>
+      <select id="statusTable">
+        <option value="All">All</option>
+        <option value="Completed">Completed</option>
+        <option value="Doing">Doing</option>
+      </select>
+      <input type="text" id="search" placeholder="Search" onchange="filter()" />
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="./main.js"></script>
+  </body>
+</html>
