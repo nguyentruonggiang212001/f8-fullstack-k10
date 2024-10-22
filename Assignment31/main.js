@@ -72,7 +72,7 @@ function addTodo() {
     .then((response) => response.json())
     .then((data) => {
       todos.push(data);
-      filterTodos();
+      filter();
       addTodoForm.reset();
     });
 }
