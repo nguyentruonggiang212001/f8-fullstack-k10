@@ -11,16 +11,16 @@ fetch("http://localhost:3000/todos")
     todos = data;
     filter();
   });
-function generateRandomID(n) {
-  let characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let id = "todo-";
-  for (let i = 0; i < n; i++) {
-    let randomIndex = Math.floor(Math.random() * characters.length);
-    id += characters[randomIndex];
-  }
-  return id;
-}
+// function generateRandomID(n) {
+//   let characters =
+//     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//   let id = "todo-";
+//   for (let i = 0; i < n; i++) {
+//     let randomIndex = Math.floor(Math.random() * characters.length);
+//     id += characters[randomIndex];
+//   }
+//   return id;
+// }
 // Hàm hiển thị todos lên màn hình
 function renderTodos(todos) {
   tbody.innerHTML = "";
@@ -57,7 +57,7 @@ function addTodo() {
     status = false;
   }
   const newTodo = {
-    id: generateRandomID(2),
+    // id: generateRandomID(2),
     title,
     description,
     status,
@@ -84,9 +84,10 @@ addTodoForm.addEventListener("submit", (event) => {
 //Trạng thái Table Todos
 function filterByStatus(todos) {
   const status = statusTable.value;
-  const filterStatus = []; // Mảng chứa todos đã lọc
+  const filterStatus = [];
   for (const todo of todos) {
     if (status === "Completed" && todo.status) {
+      // console.log(1);
       filterStatus.push(todo);
     } else if (status === "Doing" && !todo.status) {
       filterStatus.push(todo);
@@ -101,14 +102,24 @@ function filter() {
   const filterTodos = [];
   const searchTerm = searchTable.value.toLowerCase();
   const filterStatus = filterByStatus(todos);
-  filterStatus.forEach((todo) => {
-    if (
-      todo.title.toLowerCase().includes(searchTerm) ||
-      todo.description.toLowerCase().includes(searchTerm)
-    ) {
-      filterTodos.push(todo);
-    }
-  });
+
+  const result = filterStatus.filter(
+    (todo) =>
+      todo.description.toLowerCase().includes(searchTerm) ||
+      todo.title.toLowerCase().includes(searchTerm)
+  );
+
+  filterTodos.length = 0;
+  filterTodos.push(...result);
+
+  // filterStatus.forEach((todo) => {
+  //   if (
+  //     todo.title.toLowerCase().includes(searchTerm) ||
+  //     todo.description.toLowerCase().includes(searchTerm)
+  //   ) {
+  //     filterTodos.push(todo);
+  //   }
+  // });
 
   if (filterTodos.length === 0) {
     tbody.innerHTML =
@@ -117,6 +128,7 @@ function filter() {
     renderTodos(filterTodos);
   }
 }
+
 statusTable.addEventListener("change", filter);
 searchTable.addEventListener("input", filter);
 renderTodos(todos);

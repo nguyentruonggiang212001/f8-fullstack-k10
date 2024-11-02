@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <div class="img">
+            <a href="#">
+              <img src="./icontokyo-Photoroom.png" alt="logo" />
+            </a>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm..." />
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <div class="header-icon">
+            <div class="header-icon-cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>3</span>
+            </div>
+            <div class="header-icon-box">
+              <i class="fa-solid fa-box"></i>
+            </div>
+            <div class="header-icon-user">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--content-->
+    <section>
+      <div class="nav-sub">
+        <div class="container">
+          <ul>
+            <li>
+              <img
+                src=" https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F1722918849591529_512.png&w=48&q=75"
+                alt="logo"
+              />
+              <a href="#" class="link">Hàng bán chạy</a>
+            </li>
+            <li><a href="#">BST Thu Đông</a></li>
+            <li><a href="#">Nữ</a></li>
+            <li><a href="#">Nam</a></li>
+            <li><a href="#">Trẻ em</a></li>
+            <li><a href="#">Giày dép</a></li>
+            <li><a href="#">Balo-Túi ví</a></li>
+            <li><a href="#">Mỹ phẩm-làm đẹp</a></li>
+            <li><a href="#">Nhà cửa - đời sống</a></li>
+            <li><a href="#">Tin tức</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- banner -->
+      <div class="container">
+        <div class="carousel">
+          <div class="carousel-inner" id="carousel-inner"></div>
+          <div class="control">
+            <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="next">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="process">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- services -->
+    </section>
+    <!-- hàng bán chạy -->
+    <section>
+      <div class="container">
+        <div class="row product-list"></div>
+      </div>
+    </section>
+
+    <section id="danh-cho-nam">
+      <!-- dành cho nam -->
+    </section>
+
+    <section id="danh-cho-nu"></section>
+    <!-- dành cho nữ -->
+    <script type="module" src="./js/slide.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/utils.js"></script>
+    <script type="module" src="./js/services.js"></script>
+  </body>
+</html>
