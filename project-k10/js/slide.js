@@ -1,18 +1,15 @@
 const dataSlide = [
   {
     id: 1,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F1730431004411457.jpg&w=1920&q=75",
+    image: "../slider1.webp",
   },
   {
     id: 2,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17304258988015547.jpg&w=1920&q=75",
+    image: "../slider2.webp",
   },
   {
     id: 3,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17150541229617388.jpg&w=1920&q=75",
+    image: "../slider3.webp",
   },
 ];
 
@@ -100,6 +97,6 @@ function InfinitySlide() {
   }, 3000);
 }
 
-InfinitySlide();
+// InfinitySlide();
 
 renderSlide();

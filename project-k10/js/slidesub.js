@@ -1,33 +1,27 @@
 const dataSlide = [
   {
     id: 1,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17012258934063908.jpg&w=2048&q=75",
+    image: "../ao1.webp",
   },
   {
     id: 2,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17012259003367308.jpg&w=2048&q=75",
+    image: "../ao2.webp",
   },
   {
     id: 3,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17254398948436981.jpg&w=1920&q=75",
+    image: "../ao3.webp",
   },
   {
     id: 4,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17254395695898701.jpg&w=1920&q=75",
+    image: "../ao4.webp",
   },
   {
     id: 5,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17258773849447522.jpg&w=1920&q=75",
+    image: "../ao5.webp",
   },
   {
     id: 6,
-    image:
-      "https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F17258773921627946.jpg&w=1920&q=75",
+    image: "../ao6.webp",
   },
 ];
 
@@ -115,6 +109,6 @@ function InfinitySlide() {
   }, 3000);
 }
 
-InfinitySlide();
+// InfinitySlide();
 
 renderSlide();

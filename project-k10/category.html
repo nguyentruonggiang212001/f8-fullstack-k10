@@ -85,43 +85,18 @@
         </div>
       </div>
     </section>
-    <section>
-      <div class="container">
-        <div class="option">
-          <label>Sản phẩm theo danh mục</label>
-          <select id="category-select">
-            <option value="">Tất cả</option>
-            <option value="beauty">Beauty</option>
-            <option value="fragrances">Fragrances</option>
-            <option value="furniture">Furniture</option>
-            <option value="groceries">Groceries</option>
-          </select>
-          <label>Chọn khoảng giá:</label>
-          <select id="price-range">
-            <option value="">All</option>
-            <option value="1-10">1$ - 10$</option>
-            <option value="10-20">10$ - 20$</option>
-            <option value="40-100">40$ - 100$</option>
-            <option value="101-2500">101$ - 2500$</option>
-          </select>
-          <div class="sort-options">
-            <label>Sắp xếp sản phẩm</label>
-            <select id="sort-select">
-              <option value="all">All</option>
-              <option value="a-z">Tên (A - Z)</option>
-              <option value="z-a">Tên (Z - A)</option>
-              <option value="low-high">Giá (Thấp - Cao)</option>
-              <option value="high-low">Giá (Cao - Thấp)</option>
-            </select>
-          </div>
-        </div>
-        <div class="row" id="hot-sale"></div>
-        <div
-          id="search-message"
-          style="color: red; margin-top: 10px; text-align: center"
-        ></div>
-      </div>
-    </section>
+
+    <div class="container">
+      <p id="title"></p>
+    </div>
+    <div class="container">
+      <div class="row" id="category"></div>
+      <div
+        id="search-message"
+        style="color: red; margin-top: 10px; text-align: center"
+      ></div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -251,10 +226,7 @@
     </section>
 
     <section id="danh-cho-nu"></section>
-    <!-- dành cho nữ -->
-    <script type="module" src="./js/slide.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <script src="./js/category.js" type="module"></script>
     <script type="module" src="./js/utils.js"></script>
-    <!-- <script type="module" src="./js/services.js"></script> -->
   </body>
 </html>
