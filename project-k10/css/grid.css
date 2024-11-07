@@ -34,7 +34,7 @@ Responsive (Xây dựng theo Moblie First)
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 2rem;
 }
 
 .row {
@@ -100,6 +100,7 @@ Responsive (Xây dựng theo Moblie First)
 
 .col-12 {
   --col-size: 12;
+  
 }
 
 .col-offset-1 {

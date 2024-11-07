@@ -23,10 +23,11 @@ const categorySelect = document.getElementById("category-select");
 
 // Hàm lọc sản phẩm theo danh mục
 function filterByCategory(category) {
-  if (!category) {
+  if (category) {
+    return products.filter((product) => product.category === category);
+  } else {
     return products;
   }
-  return products.filter((product) => product.category === category);
 }
 
 categorySelect.addEventListener("change", () => {
@@ -40,7 +41,6 @@ const searchMessage = document.getElementById("search-message");
 
 searchInput.addEventListener("input", () => {
   const search = searchInput.value.toLowerCase();
-  searchMessage.textContent = "";
   filter(search);
 });
 
@@ -66,34 +66,43 @@ function filterProducts(selectedRange) {
   let filteredProducts = [];
 
   if (selectedRange === "1-10") {
-    filteredProducts = products.filter(
-      (product) => product.price >= 1 && product.price <= 10
-    );
+    products.forEach(function (product) {
+      if (product.price >= 1 && product.price <= 10) {
+        filteredProducts.push(product);
+      }
+    });
   } else if (selectedRange === "10-20") {
-    filteredProducts = products.filter(
-      (product) => product.price > 10 && product.price <= 20
-    );
+    products.forEach(function (product) {
+      if (product.price > 10 && product.price <= 20) {
+        filteredProducts.push(product);
+      }
+    });
   } else if (selectedRange === "40-100") {
-    filteredProducts = products.filter(
-      (product) => product.price > 40 && product.price <= 100
-    );
+    products.forEach(function (product) {
+      if (product.price > 40 && product.price <= 100) {
+        filteredProducts.push(product);
+      }
+    });
   } else if (selectedRange === "101-2500") {
-    filteredProducts = products.filter(
-      (product) => product.price > 101 && product.price <= 2500
-    );
+    products.forEach(function (product) {
+      if (product.price > 101 && product.price <= 2500) {
+        filteredProducts.push(product);
+      }
+    });
   } else {
     filteredProducts = [...products];
   }
 
-  filteredProducts.sort((a, b) => a.price - b.price);
+  filteredProducts.sort(function (a, b) {
+    return a.price - b.price;
+  });
 
   return filteredProducts;
 }
 
 priceSelect.addEventListener("change", () => {
-  const selectedRange = priceSelect.value;
   hotSaleSection.innerHTML = "";
-  render(hotSaleSection, filterProducts(selectedRange));
+  render(hotSaleSection, filterProducts(priceSelect.value));
 });
 
 // Sắp xếp sản phẩm
