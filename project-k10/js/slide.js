@@ -1,15 +1,15 @@
 const dataSlide = [
   {
     id: 1,
-    image: "../slider1.webp",
+    image: "../img/slider1.webp",
   },
   {
     id: 2,
-    image: "../slider2.webp",
+    image: "../img/slider2.webp",
   },
   {
     id: 3,
-    image: "../slider3.webp",
+    image: "../img/slider3.webp",
   },
 ];
 

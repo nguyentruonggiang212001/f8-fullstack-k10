@@ -29,6 +29,20 @@ function renderStars(rating) {
   return stars.join("");
 }
 
+function renderRatingBars(rating, star) {
+  const maxStars = 5; // Tổng số sao tối đa (5 sao)
+  const width = 100; // Độ rộng tổng của thanh (100px)
+
+  // Tính phần trăm của thanh màu cam
+  const filledWidth = (rating >= star ? 1 : 0) * width; // Phần màu cam
+  const emptyWidth = width - filledWidth; // Phần màu xám
+
+  return `
+    <span class="bar filled" style="width: ${filledWidth}px; background-color: orange;"></span>
+    <span class="bar empty" style="width: ${emptyWidth}px; background-color: gray;"></span>
+  `;
+}
+
 function renderDetail(target, data) {
   const productItem = document.createElement("div");
   productItem.innerHTML = /*html*/ `
@@ -71,7 +85,7 @@ function renderDetail(target, data) {
               <div class="sale">
                 <ul>
                   <li>
-                    <img src="./giftbox.svg" alt="box" />
+                    <img src="../img/giftbox.svg" alt="box" />
                     <p>
                       Mua áo chống nắng dáng dài chỉ từ
                       <strong>325.000đ</strong> .
@@ -79,7 +93,7 @@ function renderDetail(target, data) {
                     </p>
                   </li>
                   <li>
-                    <img src="./giftbox.svg" alt="box" />
+                    <img src="../img/giftbox.svg" alt="box" />
                     <p>
                       <strong>GIẢM 10% tối đa 100K</strong> cho đơn từ 333.000đ
                       khi nhập <strong>LUCKY11</strong> tại bước thanh toán.
@@ -87,7 +101,7 @@ function renderDetail(target, data) {
                     </p>
                   </li>
                   <li>
-                    <img src="./giftbox.svg" alt="box" />
+                    <img src="../img/giftbox.svg" alt="box" />
                     <p>
                       Nhập <strong> HPBD111</strong> giảm ngay
                       <strong>111K</strong> tại bước thanh toán cho đơn từ
@@ -95,7 +109,7 @@ function renderDetail(target, data) {
                     </p>
                   </li>
                   <li>
-                    <img src="./giftbox.svg" alt="box" />
+                    <img src="../img/giftbox.svg" alt="box" />
                     <p>
                       Săn sale <span> giày thể thao</span> chỉ từ
                       <strong>499.000đ.</strong> <a href="#"> Xem ngay</a>
@@ -106,12 +120,12 @@ function renderDetail(target, data) {
             </div>
             <div class="product-box">
               <div class="box">
-                <img src="./sale-online.svg" alt="sale" />
+                <img src="../img/sale-online.svg" alt="sale" />
                 <p>Giá độc quyền online</p>
               </div>
             </div>
             <div class="zalo">
-              <img src="./Icon_of_Zalo.svg.png" alt="zalo" />
+              <img src="../img/Icon_of_Zalo.svg.png" alt="zalo" />
               <p>Chat ngay để nhận tư vấn sản phẩm & ưu đãi</p>
               <i class="fa-solid fa-arrow-right-long"></i>
             </div>
@@ -146,15 +160,15 @@ function renderDetail(target, data) {
             <div class="line-sub"></div>
             <div class="service">
               <div class="service-sub">
-                <img src="./Ship.png" alt="ship" />
+                <img src="../img/Ship.png" alt="ship" />
                 <p>Miễn phí giao hàng xem tại giỏ hàng(*)</p>
               </div>
               <div class="service-sub">
-                <img src="./process.svg" alt="process" />
+                <img src="../img/process.svg" alt="process" />
                 <p>1 đổi 1 trong vòng 7 ngày</p>
               </div>
               <div class="service-sub">
-                <img src="./money-bag.png" alt="money-bag" />
+                <img src="../img/money-bag.png" alt="money-bag" />
                 <p>Kiếm tra hàng trước khi thanh toán</p>
               </div>
             </div>
@@ -211,7 +225,29 @@ function renderDetail(target, data) {
               </div>
             </div>
           </div>
-        </div>
+          <div class="line-sub"></div>
+          <div class="col-12">
+               <div class="reviews-list">
+             ${(() => {
+               let reviewsHtml = "";
+               data.reviews.forEach((review) => {
+                 reviewsHtml += `
+             <div class="review-item">
+             <p class="reviewer-name";>${review.reviewerName}</p>
+             <p style="color: rgb(250, 175, 0);"> ${renderStars(
+               review.rating
+             )}</p>
+             <p class="review-comment ";>Đánh giá về sản phẩm:${
+               review.comment
+             }</p>
+             <p class="review-date";>Đã đánh giá vào lúc : ${review.date}</p>
+             </div>
+              `;
+               });
+               return reviewsHtml;
+             })()}
+             </div>
+            </div>
       </div>
     </section>
   `;

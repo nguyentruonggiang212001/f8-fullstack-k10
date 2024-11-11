@@ -34,7 +34,6 @@ Responsive (Xây dựng theo Moblie First)
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .row {
@@ -156,9 +155,6 @@ Responsive (Xây dựng theo Moblie First)
 }
 
 @media screen and (min-width: 576px) {
-  .container {
-      padding: 0 2rem;
-    }
   .col-sm-1 {
     --col-size: 1;
   }
@@ -197,9 +193,6 @@ Responsive (Xây dựng theo Moblie First)
   }
 }
 @media screen and (min-width: 768px) {
-  .container {
-      padding: 0 2rem;
-    }
   .col-md-1 {
     --col-size: 1;
   }
@@ -238,9 +231,6 @@ Responsive (Xây dựng theo Moblie First)
   }
 }
 @media screen and (min-width: 992px) {
-  .container {
-      padding: 0 2rem;
-    }
   .col-lg-1 {
     --col-size: 1;
   }
@@ -279,9 +269,6 @@ Responsive (Xây dựng theo Moblie First)
   }
 }
 @media screen and (min-width: 1200px) {
-  .container {
-      padding: 0 2rem;
-    }
   .col-xl-1 {
     --col-size: 1;
   }
@@ -320,9 +307,6 @@ Responsive (Xây dựng theo Moblie First)
   }
 }
 @media screen and (min-width: 1400px) {
-  .container {
-      padding: 0 2rem;
-    }
   .col-xxl-1 {
     --col-size: 1;
   }

@@ -160,10 +160,12 @@ header .nav img {
     object-fit: cover;
 }
 .search-box {
+    position: relative;
     display: flex;
-    width: 800px;
+    width: 100%;
     border-radius: 10px;
     overflow: hidden;
+    margin: 0px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
  }
 
@@ -171,11 +173,15 @@ header .nav img {
     flex: 1;
     padding: 10px 15px;
     border: none;
-    outline: none;
     font-size: 16px;
  }
 
 .search-box button {
+    height: 43px;
+    top: -2px;
+     right: 0;
+    width: 50px;
+    position: absolute;
     width: 50px;
     background-color: #d32f2f;
     border: none;
@@ -211,8 +217,20 @@ header .nav img {
     color: #fff;
     font-weight: 500;
 }
+.header-icon-bar{
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.564);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+}
 /*header-sub*/
-.nav-sub{
+.container .nav-sub{
     position: fixed;
     top: 65px;
     right: 0;
@@ -223,13 +241,14 @@ header .nav img {
 } 
 
 
-.nav-sub ul {
+.container .nav-sub  ul {
+    position: relative;
     display: flex;
     list-style: none;
     justify-content: space-evenly;
 }
 
-.nav-sub ul li {
+.container .nav-sub ul li {
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -237,18 +256,54 @@ header .nav img {
     display: flex;
     align-items: center;
 }
- .nav-sub ul a {
+.container  .nav-sub ul a {
     display: inline-block;
     padding: 20px 0;
     text-decoration: none;
     color: #2c2c2c;
 } 
 
-.nav-sub ul li img {
+.container .nav-sub ul li img {
     margin-right: 0px;
     width: 24px;
     height: 24px;
 }
+
+.container .nav-sub ul li .dropdown {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 243px;
+}
+
+.container .nav-sub ul li .dropdown a {
+    display: block ;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.56);
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: -1px;
+    text-align: center;
+}
+.container .nav-sub ul li .dropdown a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+   
+}
+
+/* Hiển thị menu khi checkbox được checked */
+.toggle-checkbox:checked+.toggle-label+.dropdown {
+    display: block;
+}
+
+/* Kiểu cho label để trông giống nút bấm */
+.toggle-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 20px 48px;
+}
+
 /*Banner*/
  .carousel {
     width: 100%;
@@ -286,7 +341,7 @@ header .nav img {
     display: block;
 }
 .carousel img {
-    width:1136px;
+    width:100%;
     height: auto;
     object-fit: contain;
  }
@@ -314,9 +369,33 @@ header .nav img {
 /*Option*/
 .option{
     display: flex;
+    align-items: center;
     gap: 10px;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
+.option label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+.option select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    width: 150px;
+}
+
+.option select:hover{
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 /*Product-home*/
 .product-card {
     display: flex;
@@ -429,9 +508,6 @@ header .nav img {
     line-height: 16px;
     text-decoration: none
 }
-
-
-
 
 /*Slider-sub*/
  .carousel-sub {
@@ -849,21 +925,39 @@ header .nav img {
 
 }
 
-.review .review-left .review-left-body .review-left-sub .review-first{
+.review .review-left .review-left-body .review-left-sub .review-first {
     background-color: rgb(255, 167, 0);
-    width: 100%;
-    height: 9px;
     width: 186px;
+    height: 9px;
 }
-.review .review-left .review-left-body .review-left-sub span{
+.review .review-left .review-left-body .review-left-sub span {
     background-color: rgb(233, 233, 233);
-    width: 100%;
+    
     height: 9px;
     width: 186px;
 }
 
+.review-star-sub {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.review-star-sub p {
+    margin-right: 10px;
+}
+
+.review-first {
+    display: block;
+    height: 5px;
+    /* Adjust height based on your design */
+    background-color: #ffcc00;
+    /* Star color */
+    transition: width 0.3s ease;
+}
+
 .review .review-right {
-    height: 120px;
+    height: 142px;
 }
 .review .review-right .review-right-body p{
     font-size: 14px;
@@ -894,7 +988,7 @@ header .nav img {
 
 .footer .container .row .footer-header ul li a{
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 24px;
     color: rgb(0, 0, 0);
 }
@@ -930,8 +1024,8 @@ header .nav img {
 }
 
 .footer .container .row .footer-sub ul li{
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 24px;
     color: rgb(0, 0, 0);
 }
 .footer .container .row .footer-notification img {
@@ -956,3 +1050,152 @@ header .nav img {
     line-height: 16px;
     font-weight: 400;
 }
+
+
+
+.reviews-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    border: 1px solid #ddd;
+    padding: 15px ;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-stars {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.review-comment {
+    margin: 10px 0;
+}
+
+.review-date {
+    color: #666;
+    font-size: 13px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+/*Reponsive*/
+@media screen and (max-width: 1200px) {
+.container {
+ padding: 0 2rem;
+}
+}
+@media screen and (max-width: 1199.98px) {
+.container {
+ padding: 0 2rem;
+}
+.footer .container .row .footer-header .row{
+    justify-content: left;
+}
+}
+@media screen and (max-width: 991.98px) {
+ .container {
+ padding: 0 2rem;
+}
+.header-icon-bar {
+    display: block;
+}
+.container .nav-sub {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 100vw;
+    transform: translateX(-400px);
+    transition: ease 0.4s;
+    transition-property: translate;
+    z-index: 999;
+}
+
+#check:checked~.container .nav-sub {
+    transform: translateX(0);
+}
+
+#check:checked~.container .header-icon .overlay {
+    display: block;
+
+}
+
+
+
+
+.container .nav-sub ul {
+    display: block;
+}
+.container .nav-sub ul li img {
+    display: none;
+}
+.container .nav-sub ul a {
+    padding: 20px 48px;
+}
+.carousel {
+    margin-top: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-card img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+.option{
+    display: grid;
+}
+.option select{
+    width: 40%;
+}
+.footer .container .row .footer-sub ul li{
+    font-size: 12px;
+}
+}
+
+@media screen and (max-width: 767.98px) {
+.container {
+ padding: 0 2rem;
+}
+
+  
+}
+
+@media screen and (max-width: 576.98px) {
+ .container {
+ padding: 0 2rem;
+}
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+

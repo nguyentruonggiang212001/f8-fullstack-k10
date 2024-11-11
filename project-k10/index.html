@@ -13,11 +13,12 @@
   </head>
   <body>
     <header>
+      <input type="checkbox" id="check" />
       <div class="container">
         <div class="nav">
           <div class="img">
             <a href="./index.html">
-              <img src="./icontokyo-Photoroom.png" alt="logo" />
+              <img src="./img/icontokyo-Photoroom.png" alt="logo" />
             </a>
           </div>
           <div class="search-box">
@@ -37,27 +38,57 @@
             <div class="header-icon-user">
               <i class="fa-solid fa-user"></i>
             </div>
+            <label class="header-icon-bar" for="check">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <label class="overlay" for="check"></label>
           </div>
         </div>
       </div>
     </header>
     <!--content-->
     <section>
-      <div class="nav-sub">
-        <div class="container">
+      <div class="container">
+        <div class="nav-sub">
           <ul>
             <li>
               <img
                 src=" https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F1722918849591529_512.png&w=48&q=75"
                 alt="logo"
               />
-              <a href="#hot-sale" class="link">Hàng bán chạy</a>
+              <a href="./index.html#hotsale" class="link">Hàng bán chạy</a>
             </li>
-            <li><a href="./category.html?category=beauty">Nữ</a></li>
-            <li><a href="./category.html?category=smartphones">Nam</a></li>
-            <li><a href="#">Trẻ em</a></li>
-            <li><a href="#">Giày dép</a></li>
-            <li><a href="#">Balo-Túi ví</a></li>
+            <li>
+              <input type="checkbox" id="toggleWomen" class="toggle-checkbox" />
+              <label for="toggleWomen" class="toggle-label"> Nữ</label>
+              <div class="dropdown">
+                <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
+                <a href="./category.html?category=womens-dresses">Váy Nữ</a>
+                <a href="./category.html?category=womens-shoes">Giày Nữ</a>
+                <a href="./category.html?category=womens-watches">Đồng Hồ Nữ</a>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" id="toggleMen" class="toggle-checkbox" />
+              <label for="toggleMen" class="toggle-label">Nam</label>
+              <div class="dropdown">
+                <a href="./category.html?category=mens-shirts">Áo Nam</a>
+                <a href="./category.html?category=mens-shoes">Giày Nam</a>
+                <a href="./category.html?category=mens-watches">Đồng Hồ Nam</a>
+                <a href="./category.html?category=laptops">Laptops Nam</a>
+              </div>
+            </li>
+            <li>
+              <a href="./category.html?category=sports-accessories"
+                >Vật Dụng Thể Thao</a
+              >
+            </li>
+            <li><a href="./category.html?category=sunglasses">Kính</a></li>
+            <li>
+              <a href="./category.html?category=home-decoration"
+                >Trang Trí Nhà</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -84,7 +115,7 @@
     <section>
       <div class="container">
         <div class="option">
-          <label>Sản phẩm theo danh mục</label>
+          <label>Sản phẩm theo danh mục:</label>
           <select id="category-select">
             <option value="">Tất cả</option>
             <option value="beauty">Beauty</option>
@@ -100,16 +131,14 @@
             <option value="40-100">40$ - 100$</option>
             <option value="101-2500">101$ - 2500$</option>
           </select>
-          <div class="sort-options">
-            <label>Sắp xếp sản phẩm</label>
-            <select id="sort-select">
-              <option value="all">All</option>
-              <option value="a-z">Tên (A - Z)</option>
-              <option value="z-a">Tên (Z - A)</option>
-              <option value="low-high">Giá (Thấp - Cao)</option>
-              <option value="high-low">Giá (Cao - Thấp)</option>
-            </select>
-          </div>
+          <label>Sắp xếp sản phẩm:</label>
+          <select id="sort-select">
+            <option value="all">All</option>
+            <option value="a-z">Tên (A - Z)</option>
+            <option value="z-a">Tên (Z - A)</option>
+            <option value="low-high">Giá (Thấp - Cao)</option>
+            <option value="high-low">Giá (Cao - Thấp)</option>
+          </select>
         </div>
         <div class="row" id="hot-sale"></div>
         <div
@@ -188,22 +217,25 @@
                 <ul>
                   <li>
                     <a href="https://www.tiktok.com/@tokyolife.channel">
-                      <img src="./tiktok-svgrepo-com.svg" alt="tiktok" />
+                      <img src="./img//tiktok-svgrepo-com.svg" alt="tiktok" />
                     </a>
                   </li>
                   <li>
                     <a href="https://www.facebook.com/TokyoLifeOnline">
-                      <img src="./facebook-svgrepo-com.svg" alt="facebook" />
+                      <img
+                        src="./img/facebook-svgrepo-com.svg"
+                        alt="facebook"
+                      />
                     </a>
                   </li>
                   <li>
                     <a href="https://zalo.me/4260866750527113904">
-                      <img src="./Icon_of_Zalo.svg.png" alt="zalo" />
+                      <img src="./img/Icon_of_Zalo.svg.png" alt="zalo" />
                     </a>
                   </li>
                   <li>
                     <a href="https://tokyolife.vn/blog">
-                      <img src="./tokyolife.gif" alt="tokyolife" />
+                      <img src="./img/tokyolife.gif" alt="tokyolife" />
                     </a>
                   </li>
                   <li>
@@ -232,7 +264,7 @@
                     </ul>
                   </div>
                   <div class="footer-notification">
-                    <img src="./bocongthuong.png" alt="bocongthuong" />
+                    <img src="./img//bocongthuong.png" alt="bocongthuong" />
                   </div>
                 </div>
               </div>
@@ -241,18 +273,11 @@
         </div>
       </div>
     </footer>
-
     <div class="footer-last">
-      <img src="./footer-logo.png" alt="footer-logo" />
+      <img src="./img//footer-logo.png" alt="footer-logo" />
       <span>Copyright © 2014-2024 Tokyolife.vn All Rights Reserved.</span>
     </div>
-
-    <section id="danh-cho-nam">
-      <!-- dành cho nam -->
-    </section>
-
-    <section id="danh-cho-nu"></section>
-    <!-- dành cho nữ -->
+    <script src="./js/category.js" type="module"></script>
     <script type="module" src="./js/slide.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/utils.js"></script>

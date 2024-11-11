@@ -13,15 +13,16 @@
   </head>
   <body>
     <header>
+      <input type="checkbox" id="check" hidden />
       <div class="container">
         <div class="nav">
           <div class="img">
             <a href="./index.html">
-              <img src="./icontokyo-Photoroom.png" alt="logo" />
+              <img src="./img/icontokyo-Photoroom.png" alt="logo" />
             </a>
           </div>
           <div class="search-box">
-            <input type="text" placeholder="Tìm kiếm..." />
+            <input type="text" id="search-input" placeholder="Tìm kiếm..." />
             <button>
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -37,32 +38,65 @@
             <div class="header-icon-user">
               <i class="fa-solid fa-user"></i>
             </div>
+            <label class="header-icon-bar" for="check">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <label class="overlay" for="check"></label>
           </div>
         </div>
       </div>
     </header>
     <!-- content -->
     <section>
-      <div class="nav-sub">
-        <div class="container">
+      <div class="container">
+        <div class="nav-sub">
           <ul>
             <li>
               <img
                 src=" https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F1722918849591529_512.png&w=48&q=75"
                 alt="logo"
               />
-              <a href="./index.html#hot-sale" class="link">Hàng bán chạy</a>
+              <a href="./index.html#hotsale" class="link">Hàng bán chạy</a>
             </li>
-            <li><a href="./category.html?category=beauty">Nữ</a></li>
-            <li><a href="./category.html?category=smartphones">Nam</a></li>
-            <li><a href="#">Trẻ em</a></li>
-            <li><a href="#">Giày dép</a></li>
-            <li><a href="#">Balo-Túi ví</a></li>
+            <li>
+              <input type="checkbox" id="toggleWomen" class="toggle-checkbox" />
+              <a href="#"
+                ><label for="toggleWomen" class="toggle-label"> Nữ</label></a
+              >
+              <div class="dropdown">
+                <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
+                <a href="./category.html?category=womens-dresses">Váy Nữ</a>
+                <a href="./category.html?category=womens-shoes">Giày Nữ</a>
+                <a href="./category.html?category=womens-watches">Đồng Hồ Nữ</a>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" id="toggleMen" class="toggle-checkbox" />
+              <a href="#">
+                <label for="toggleMen" class="toggle-label">Nam</label></a
+              >
+              <div class="dropdown">
+                <a href="./category.html?category=mens-shirts">Áo Nam</a>
+                <a href="./category.html?category=mens-shoes">Giày Nam</a>
+                <a href="./category.html?category=mens-watches">Đồng Hồ Nam</a>
+                <a href="./category.html?category=laptops">Laptops Nam</a>
+              </div>
+            </li>
+            <li>
+              <a href="./category.html?category=sports-accessories"
+                >Vật Dụng Thể Thao</a
+              >
+            </li>
+            <li><a href="./category.html?category=sunglasses">Kính</a></li>
+            <li>
+              <a href="./category.html?category=home-decoration"
+                >Trang Trí Nhà</a
+              >
+            </li>
           </ul>
         </div>
       </div>
     </section>
-
     <section>
       <div class="header-contenxt">
         <div class="container">
@@ -80,8 +114,131 @@
         <div id="detail"></div>
       </div>
     </section>
-
-    <script type="module" src="./js/slidesub.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="footer-header">
+              <div class="row">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                  <div class="footer-header">
+                    <span>VỀ TOKYOLIFE</span>
+                    <ul>
+                      <li><a href="#">Chúng tôi là ai</a></li>
+                      <li><a href="#">Cam kết của chúng tôi</a></li>
+                      <li><a href="#">Tin tuyển dụng</a></li>
+                      <li><a href="#">Hệ thống cửa hàng</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                  <div class="footer-header">
+                    <span>HỖ TRỢ KHÁCH HÀNG</span>
+                    <ul>
+                      <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                      <li><a href="#">Phương thức thanh toán</a></li>
+                      <li><a href="#">Chính sách thành viên</a></li>
+                      <li><a href="#">Chính sách tích - tiêu điểm</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                  <div class="footer-header">
+                    <span>CHÍNH SÁCH</span>
+                    <ul>
+                      <li><a href="#">Chính sách vận chuyển</a></li>
+                      <li><a href="#">Chính sách kiểm hàng</a></li>
+                      <li><a href="#">Chính sách đổi trả</a></li>
+                      <li><a href="#">Điều kiện & Điều khoản</a></li>
+                      <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                  <div class="footer-header">
+                    <span>LIÊN HỆ</span>
+                    <ul>
+                      <li><a href="#">Tư vấn mua online: 024 7308 2882 </a></li>
+                      <li>
+                        <a href="#">Khiếu nại và bảo hành: 024 7300 6999</a>
+                      </li>
+                      <li><a href="#">Email: cskh@tokyolife.vn</a></li>
+                      <li>
+                        <a href="#">Giờ làm việc: 8:30 - 22:00 hàng ngày</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-media">
+              <div class="footer-sub">
+                <span>Kết nối với TOKYOLIFE </span>
+              </div>
+              <div class="footer-img">
+                <ul>
+                  <li>
+                    <a href="https://www.tiktok.com/@tokyolife.channel">
+                      <img src="./img//tiktok-svgrepo-com.svg" alt="tiktok" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/TokyoLifeOnline">
+                      <img
+                        src="./img/facebook-svgrepo-com.svg"
+                        alt="facebook"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://zalo.me/4260866750527113904">
+                      <img src="./img/Icon_of_Zalo.svg.png" alt="zalo" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://tokyolife.vn/blog">
+                      <img src="./img/tokyolife.gif" alt="tokyolife" />
+                    </a>
+                  </li>
+                  <li>
+                    <span>TokyoLife <br />News</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="line"></div>
+              <div class="company">
+                <div class="footer-sub">
+                  <div class="footer-text">
+                    <span>Công ty cổ phần STAAAR</span>
+                    <ul>
+                      <li>
+                        <u>Địa chỉ</u>: Tầng 6, số 96 Thái Hà Phường Trung Liệt,
+                        Quận Đống Đa, Thành phố Hà Nội, Việt Nam.
+                      </li>
+                      <li>
+                        <u>Mã số thuế</u>: 0109749326, ngày cấp ĐKKD 29/04/2021.
+                        <u> Nơi cấp</u>: Sở kế hoạch và đầu tư thành phố Hà Nội.
+                      </li>
+                      <li>
+                        <u>Điện thoại</u>: 024.7300.6999 Email:
+                        cskh@tokyolife.vn
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer-notification">
+                    <img src="./img//bocongthuong.png" alt="bocongthuong" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-last">
+      <img src="./img//footer-logo.png" alt="footer-logo" />
+      <span>Copyright © 2014-2024 Tokyolife.vn All Rights Reserved.</span>
+    </div>
     <script type="module" src="./js/detail.js"></script>
     <script type="module" src="./js/utils.js"></script>
   </body>
