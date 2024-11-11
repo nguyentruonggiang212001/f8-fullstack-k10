@@ -12,8 +12,9 @@
     />
   </head>
   <body>
+    <input type="checkbox" id="check" />
+    <label class="overlay" for="check"></label>
     <header>
-      <input type="checkbox" id="check" hidden />
       <div class="container">
         <div class="nav">
           <div class="img">
@@ -41,26 +42,37 @@
             <label class="header-icon-bar" for="check">
               <i class="fa-solid fa-bars"></i>
             </label>
-            <label class="overlay" for="check"></label>
           </div>
         </div>
       </div>
     </header>
+
     <!--content-->
     <section>
       <div class="container">
         <div class="nav-sub">
           <ul>
             <li>
-              <img
-                src=" https://tokyolife.vn/_next/image?url=https%3A%2F%2Fhcm.fstorage.vn%2Fgppm2%2Fprod%2Fcms%2F1722918849591529_512.png&w=48&q=75"
-                alt="logo"
-              />
+              <div class="img-sub">
+                <img
+                  src="./img/banner.jpg"
+                  alt="banner"
+                  class="img-sub-first"
+                />
+                <img
+                  src="./img/LogoMenuMobile.0bf1ee6a.svg"
+                  class="img-sub-second"
+                />
+              </div>
+            </li>
+            <li>
               <a href="./index.html#hotsale" class="link">Hàng bán chạy</a>
             </li>
             <li>
               <input type="checkbox" id="toggleWomen" class="toggle-checkbox" />
-              <label for="toggleWomen" class="toggle-label"> Nữ</label>
+              <label for="toggleWomen" class="toggle-label">
+                Nữ <i class="fa-solid fa-caret-down"></i
+              ></label>
               <div class="dropdown">
                 <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
                 <a href="./category.html?category=womens-dresses">Váy Nữ</a>
@@ -70,7 +82,9 @@
             </li>
             <li>
               <input type="checkbox" id="toggleMen" class="toggle-checkbox" />
-              <label for="toggleMen" class="toggle-label">Nam</label>
+              <label for="toggleMen" class="toggle-label"
+                >Nam <i class="fa-solid fa-caret-down"></i
+              ></label>
               <div class="dropdown">
                 <a href="./category.html?category=mens-shirts">Áo Nam</a>
                 <a href="./category.html?category=mens-shoes">Giày Nam</a>
@@ -125,16 +139,14 @@
           <option value="40-100">40$ - 100$</option>
           <option value="101-2500">101$ - 2500$</option>
         </select>
-        <div class="sort-options">
-          <label>Sắp xếp sản phẩm:</label>
-          <select id="sort-select">
-            <option value="all">All</option>
-            <option value="a-z">Tên (A - Z)</option>
-            <option value="z-a">Tên (Z - A)</option>
-            <option value="low-high">Giá (Thấp - Cao)</option>
-            <option value="high-low">Giá (Cao - Thấp)</option>
-          </select>
-        </div>
+        <label>Sắp xếp sản phẩm:</label>
+        <select id="sort-select">
+          <option value="all">All</option>
+          <option value="a-z">Tên (A - Z)</option>
+          <option value="z-a">Tên (Z - A)</option>
+          <option value="low-high">Giá (Thấp - Cao)</option>
+          <option value="high-low">Giá (Cao - Thấp)</option>
+        </select>
       </div>
       <div class="row" id="category"></div>
       <div

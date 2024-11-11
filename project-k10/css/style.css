@@ -145,7 +145,7 @@ top: 0;
 right: 0;
 background: rgb(248, 241, 228);;
 width: 100%;
-z-index: 9999;
+z-index: 997;
 }
 
 header .nav {
@@ -227,6 +227,7 @@ header .nav img {
     background: rgba(0, 0, 0, 0.564);
     opacity: 0;
     visibility: hidden;
+    z-index: 998;
     transition: 0.4s ease-in-out;
 }
 /*header-sub*/
@@ -238,7 +239,10 @@ header .nav img {
     box-shadow: 0px 1.667px 8.333px 0px rgba(0, 0, 0, 0.15);
     width: 100%;
     z-index: 999;
-} 
+}
+.container .nav-sub .img-sub{
+    display: none;
+}
 
 
 .container .nav-sub  ul {
@@ -263,11 +267,6 @@ header .nav img {
     color: #2c2c2c;
 } 
 
-.container .nav-sub ul li img {
-    margin-right: 0px;
-    width: 24px;
-    height: 24px;
-}
 
 .container .nav-sub ul li .dropdown {
     display: none;
@@ -280,7 +279,7 @@ header .nav img {
     display: block ;
     cursor: pointer;
     padding: 12px 16px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.56);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.858);
     background-color: #fff;
     box-sizing: border-box;
     margin: -1px;
@@ -302,6 +301,9 @@ header .nav img {
     cursor: pointer;
     display: inline-block;
     padding: 20px 48px;
+}
+.toggle-label i {
+    display: none;
 }
 
 /*Banner*/
@@ -1111,50 +1113,50 @@ header .nav img {
     position: absolute;
     left: 0;
     width: 200px;
-    height: 100vw;
+    height: 1072vw;
     transform: translateX(-400px);
-    transition: ease 0.4s;
-    transition-property: translate;
+    transition: transform 0.4s ease;
     z-index: 999;
+    top: 0;
 }
 
-#check:checked~.container .nav-sub {
+#check:checked ~ section .container .nav-sub {
     transform: translateX(0);
 }
 
-#check:checked~.container .header-icon .overlay {
-    display: block;
+#check:checked~ .overlay {
+    visibility: visible;
+    opacity: 1;
 
 }
-
-
-
-
+.container .nav-sub ul li{
+    flex-direction: column;
+}
+.container .nav-sub ul li .dropdown{
+    position: relative;
+    margin-top: 0px;
+    box-shadow: none;
+}
+.container .nav-sub .img-sub  {
+    display: block;
+    position: relative;
+}
+.container .nav-sub .img-sub .img-sub-first{
+    width: 200px;
+    height: 60px;
+}
+.container .nav-sub .img-sub .img-sub-second{
+    position: absolute;
+    width: 200px;
+    left: 0;
+    top: 15px;
+}
 .container .nav-sub ul {
     display: block;
-}
-.container .nav-sub ul li img {
-    display: none;
-}
-.container .nav-sub ul a {
-    padding: 20px 48px;
 }
 .carousel {
     margin-top: 90px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 .product-card img {
     width: 60%;
     height: auto;
@@ -1167,6 +1169,19 @@ header .nav img {
 }
 .option select{
     width: 40%;
+}
+.toggle-label i {
+    display: block;
+    position: relative;
+        top: -2px;
+}
+.toggle-label {
+    gap: 6px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    padding: 20px 50px;
+    align-items: center;
 }
 .footer .container .row .footer-sub ul li{
     font-size: 12px;
