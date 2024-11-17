@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi tiết sản phẩm</title>
+    <title>Giỏ Hàng</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/grid.css" />
     <link
@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body style="background-color: #aaaaaa30">
     <input type="checkbox" id="check" />
     <label class="overlay" for="check"></label>
     <header>
@@ -30,9 +30,7 @@
           </div>
           <div class="header-icon">
             <div class="header-icon-cart">
-              <a href="./cart.html">
-                <i class="fa-solid fa-cart-shopping"></i
-              ></a>
+              <i class="fa-solid fa-cart-shopping"></i>
             </div>
             <div class="header-icon-box">
               <i class="fa-solid fa-box"></i>
@@ -70,37 +68,41 @@
             <li>
               <div class="toggle-pc">
                 <label class="toggle-label">
-                  Nữ <i class="fa-solid fa-caret-down"></i>
+                  Nữ<i class="fa-solid fa-caret-down"></i>
                 </label>
                 <div class="dropdown">
-                  <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
-                  <a href="./category.html?category=womens-dresses">Váy Nữ</a>
-                  <a href="./category.html?category=womens-shoes">Giày Nữ</a>
-                  <a href="./category.html?category=womens-watches"
-                    >Đồng Hồ Nữ</a
-                  >
+                  <div class="dropdown-girl">
+                    <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
+                    <a href="./category.html?category=womens-dresses">Váy Nữ</a>
+                    <a href="./category.html?category=womens-shoes">Giày Nữ</a>
+                    <a href="./category.html?category=womens-watches"
+                      >Đồng Hồ Nữ</a
+                    >
+                  </div>
                 </div>
               </div>
             </li>
             <li>
               <div class="toggle-pc">
                 <label class="toggle-label">
-                  Nam <i class="fa-solid fa-caret-down"></i>
+                  Nam<i class="fa-solid fa-caret-down"></i>
                 </label>
                 <div class="dropdown">
-                  <a href="./category.html?category=mens-shirts">Áo Nam</a>
-                  <a href="./category.html?category=mens-shoes">Giày Nam</a>
-                  <a href="./category.html?category=mens-watches"
-                    >Đồng Hồ Nam</a
-                  >
-                  <a href="./category.html?category=laptops">Laptops Nam</a>
+                  <div class="dropdown-boy">
+                    <a href="./category.html?category=mens-shirts">Áo Nam</a>
+                    <a href="./category.html?category=mens-shoes">Giày Nam</a>
+                    <a href="./category.html?category=mens-watches"
+                      >Đồng Hồ Nam</a
+                    >
+                    <a href="./category.html?category=laptops">Laptops Nam</a>
+                  </div>
                 </div>
               </div>
             </li>
             <div class="toggle-mb">
               <input type="checkbox" id="toggleWomen" class="toggle-checkbox" />
               <label for="toggleWomen" class="toggle-label">
-                Nữ <i class="fa-solid fa-caret-down"></i>
+                Nữ<i class="fa-solid fa-caret-down"></i>
               </label>
               <div class="dropdown" id="dropdownWomen">
                 <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
@@ -112,7 +114,7 @@
             <div class="toggle-mb">
               <input type="checkbox" id="toggleMen" class="toggle-checkbox" />
               <label for="toggleMen" class="toggle-label">
-                Nam <i class="fa-solid fa-caret-down"></i>
+                Nam<i class="fa-solid fa-caret-down"></i>
               </label>
               <div class="dropdown" id="dropdownMen">
                 <a href="./category.html?category=mens-shirts">Áo Nam</a>
@@ -121,7 +123,6 @@
                 <a href="./category.html?category=laptops">Laptops Nam</a>
               </div>
             </div>
-
             <li>
               <a href="./category.html?category=sports-accessories"
                 >Vật Dụng Thể Thao</a
@@ -144,22 +145,48 @@
       </div>
     </div>
     <section>
-      <div class="header-contenxt">
+      <div class="cart">
         <div class="container">
-          <ul>
-            <li><a href="./index.html">Trang chủ |</a></li>
-            <li>Sản phẩm của Tokyolife</li>
-          </ul>
+          <div class="row">
+            <div class="col-12">
+              <div class="cart-header">
+                <div class="text-cart-header">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="text-first">GIỎ HÀNG</span>
+                </div>
+                <div class="text-cart-sub">
+                  <i class="fa-solid fa-box"></i>
+                  <span>ĐẶT HÀNG</span>
+                </div>
+                <div class="text-cart-sub">
+                  <i class="fa-solid fa-boxes-stacked"></i>
+                  <span>HOÀN THÀNH ĐƠN HÀNG</span>
+                </div>
+              </div>
+              <a href="#">
+                <img
+                  class="img-cart"
+                  src="./img/e2baa9c4-a867-4560-b6df-58f892730209.jpg"
+                  alt="logo"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section>
-      <!--detail -->
-      <div class="container">
-        <div id="detail"></div>
+    <div class="container">
+      <button class="icon-contact">
+        <a href="https://zalo.me/4260866750527113904"
+          ><img src="../img/icon-contact.webp" alt="box"
+        /></a>
+      </button>
+    </div>
+    <div class="container">
+      <div class="cart-main" style="display: flex; justify-content: center">
+        <div class="col-xl-10 col-lg-10 col-sm-12" id="Cart"></div>
       </div>
-    </section>
-    <!--footer -->
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -285,7 +312,8 @@
       <img src="./img//footer-logo.png" alt="footer-logo" />
       <span>Copyright © 2014-2024 Tokyolife.vn All Rights Reserved.</span>
     </div>
-    <script type="module" src="./js/detail.js"></script>
+    <script type="module" src="./js/cart.js"></script>
     <script type="module" src="./js/utils.js"></script>
+    <script type="module" src="./js/services.js"></script>
   </body>
 </html>

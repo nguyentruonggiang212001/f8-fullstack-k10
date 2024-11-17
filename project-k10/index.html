@@ -24,14 +24,15 @@
           </div>
           <div class="search-box">
             <input type="text" id="search-input" placeholder="Tìm kiếm..." />
-            <button>
+            <button id="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
           <div class="header-icon">
             <div class="header-icon-cart">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span>3</span>
+              <a href="./cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
             </div>
             <div class="header-icon-box">
               <i class="fa-solid fa-box"></i>
@@ -51,46 +52,80 @@
       <div class="container">
         <div class="nav-sub">
           <ul>
+            <div class="img-sub">
+              <img src="./img/banner.jpg" alt="banner" class="img-sub-first" />
+              <img
+                src="./img/LogoMenuMobile.0bf1ee6a.svg"
+                class="img-sub-second"
+                alt="logo"
+              />
+            </div>
             <li>
-              <div class="img-sub">
-                <img
-                  src="./img/banner.jpg"
-                  alt="banner"
-                  class="img-sub-first"
-                />
-                <img
-                  src="./img/LogoMenuMobile.0bf1ee6a.svg"
-                  class="img-sub-second"
-                />
+              <a
+                href="./category.html?category=kitchen-accessories"
+                class="link"
+                >Mặt hàng bán chạy
+              </a>
+            </li>
+            <li>
+              <div class="toggle-pc">
+                <label class="toggle-label">
+                  Nữ<i class="fa-solid fa-caret-down"></i>
+                </label>
+                <div class="dropdown">
+                  <div class="dropdown-girl">
+                    <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
+                    <a href="./category.html?category=womens-dresses">Váy Nữ</a>
+                    <a href="./category.html?category=womens-shoes">Giày Nữ</a>
+                    <a href="./category.html?category=womens-watches"
+                      >Đồng Hồ Nữ</a
+                    >
+                  </div>
+                </div>
               </div>
             </li>
             <li>
-              <a href="./index.html#hotsale" class="link">Hàng bán chạy</a>
+              <div class="toggle-pc">
+                <label class="toggle-label">
+                  Nam<i class="fa-solid fa-caret-down"></i>
+                </label>
+                <div class="dropdown">
+                  <div class="dropdown-boy">
+                    <a href="./category.html?category=mens-shirts">Áo Nam</a>
+                    <a href="./category.html?category=mens-shoes">Giày Nam</a>
+                    <a href="./category.html?category=mens-watches"
+                      >Đồng Hồ Nam</a
+                    >
+                    <a href="./category.html?category=laptops">Laptops Nam</a>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li>
+            <div class="toggle-mb">
               <input type="checkbox" id="toggleWomen" class="toggle-checkbox" />
               <label for="toggleWomen" class="toggle-label">
-                Nữ <i class="fa-solid fa-caret-down"></i
-              ></label>
-              <div class="dropdown">
+                Nữ<i class="fa-solid fa-caret-down"></i>
+              </label>
+              <div class="dropdown" id="dropdownWomen">
                 <a href="./category.html?category=beauty">Làm Đẹp Nữ</a>
                 <a href="./category.html?category=womens-dresses">Váy Nữ</a>
                 <a href="./category.html?category=womens-shoes">Giày Nữ</a>
                 <a href="./category.html?category=womens-watches">Đồng Hồ Nữ</a>
               </div>
-            </li>
-            <li>
+            </div>
+            <div class="toggle-mb">
               <input type="checkbox" id="toggleMen" class="toggle-checkbox" />
-              <label for="toggleMen" class="toggle-label"
-                >Nam <i class="fa-solid fa-caret-down"></i
-              ></label>
-              <div class="dropdown">
+              <label for="toggleMen" class="toggle-label">
+                Nam<i class="fa-solid fa-caret-down"></i>
+              </label>
+              <div class="dropdown" id="dropdownMen">
                 <a href="./category.html?category=mens-shirts">Áo Nam</a>
                 <a href="./category.html?category=mens-shoes">Giày Nam</a>
                 <a href="./category.html?category=mens-watches">Đồng Hồ Nam</a>
                 <a href="./category.html?category=laptops">Laptops Nam</a>
               </div>
-            </li>
+            </div>
+
             <li>
               <a href="./category.html?category=sports-accessories"
                 >Vật Dụng Thể Thao</a
@@ -106,7 +141,12 @@
         </div>
       </div>
     </section>
-
+    <div class="search-sub">
+      <div class="search-box-sub">
+        <input type="text" id="search-input-sub" placeholder="Tìm kiếm..." />
+        <button id="search-button-sub"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
     <!-- banner -->
     <section>
       <div class="container">
@@ -126,6 +166,9 @@
         </div>
       </div>
     </section>
+    <div class="text-center">
+      <h1>Các Sản Phẩm Của TokyoLife</h1>
+    </div>
     <section>
       <div class="container">
         <div class="option">
@@ -166,6 +209,7 @@
         ></div>
       </div>
     </section>
+    <!--footer -->
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -291,7 +335,6 @@
       <img src="./img//footer-logo.png" alt="footer-logo" />
       <span>Copyright © 2014-2024 Tokyolife.vn All Rights Reserved.</span>
     </div>
-    <script src="./js/category.js" type="module"></script>
     <script type="module" src="./js/slide.js"></script>
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/utils.js"></script>

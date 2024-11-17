@@ -97,6 +97,6 @@ function InfinitySlide() {
   }, 3000);
 }
 
-// InfinitySlide();
+InfinitySlide();
 
 renderSlide();

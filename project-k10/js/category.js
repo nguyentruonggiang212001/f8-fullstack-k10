@@ -2,6 +2,7 @@ import { getAll } from "./services.js";
 import { getParams, render } from "./utils.js";
 
 const categoryEle = document.getElementById("category");
+console.log(categoryEle);
 const title = document.getElementById("title");
 
 const param = getParams("category");
@@ -14,9 +15,14 @@ render(categoryEle, products);
 
 const searchInput = document.getElementById("search-input");
 const searchMessage = document.getElementById("search-message");
+const searchButton = document.getElementById("search-button");
 
 // Hàm lọc sản phẩm khi người dùng nhập tìm kiếm
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener("change", () => {
+  const search = searchInput.value.toLowerCase();
+  filter(search);
+});
+searchButton.addEventListener("click", () => {
   const search = searchInput.value.toLowerCase();
   filter(search);
 });
@@ -131,3 +137,53 @@ sortSelect.addEventListener("change", () => {
   categoryEle.innerHTML = "";
   render(categoryEle, sortProducts());
 });
+//chọn nam nữ dropdown
+const toggleWomen = document.getElementById("toggleWomen");
+const toggleMen = document.getElementById("toggleMen");
+const dropdownWomen = document.getElementById("dropdownWomen");
+const dropdownMen = document.getElementById("dropdownMen");
+
+function toggleDropdown(checkbox, dropdown) {
+  if (checkbox.checked) {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
+toggleWomen.addEventListener("change", function () {
+  toggleDropdown(toggleWomen, dropdownWomen);
+});
+
+toggleMen.addEventListener("change", function () {
+  toggleDropdown(toggleMen, dropdownMen);
+});
+
+//search-sub
+const searchInputSub = document.getElementById("search-input-sub");
+const searchMessageSub = document.getElementById("search-message");
+const searchButtonSub = document.getElementById("search-button-sub");
+
+searchInputSub.addEventListener("change", () => {
+  const searchSub = searchInputSub.value.toLowerCase();
+  filterSub(searchSub);
+});
+searchButtonSub.addEventListener("click", () => {
+  const searchSub = searchInputSub.value.toLowerCase();
+  filterSub(searchSub);
+});
+
+// Hàm thực hiện tìm kiếm
+function filterSub(search) {
+  const filteredProductsSub = products.filter((product) =>
+    product.title.toLowerCase().includes(search)
+  );
+
+  hotSaleSection.innerHTML = "";
+
+  if (filteredProductsSub.length === 0) {
+    searchMessageSub.textContent = "Không tìm thấy sản phẩm.";
+  } else {
+    render(hotSaleSection, filteredProductsSub);
+  }
+}

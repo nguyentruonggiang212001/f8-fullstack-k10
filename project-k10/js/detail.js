@@ -1,12 +1,17 @@
 import { getById } from "./services.js";
 import { getParams } from "./utils.js";
+import { getAll } from "./services.js";
 
 const detailEle = document.getElementById("detail");
 
 const id = getParams("id");
-console.log(id);
 const product = await getById("products", id);
-console.log(product);
+
+const cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+
+const getData = async (param) => {
+  return await getAll(`products/category/${param}`);
+};
 
 function renderStars(rating) {
   const fiveStar = '<i class="fa-solid fa-star"></i>';
@@ -29,26 +34,13 @@ function renderStars(rating) {
   return stars.join("");
 }
 
-function renderRatingBars(rating, star) {
-  const maxStars = 5; // Tổng số sao tối đa (5 sao)
-  const width = 100; // Độ rộng tổng của thanh (100px)
-
-  // Tính phần trăm của thanh màu cam
-  const filledWidth = (rating >= star ? 1 : 0) * width; // Phần màu cam
-  const emptyWidth = width - filledWidth; // Phần màu xám
-
-  return `
-    <span class="bar filled" style="width: ${filledWidth}px; background-color: orange;"></span>
-    <span class="bar empty" style="width: ${emptyWidth}px; background-color: gray;"></span>
-  `;
-}
-
 function renderDetail(target, data) {
   const productItem = document.createElement("div");
+
   productItem.innerHTML = /*html*/ `
-    <div class="row">
+   <div class="row">
    <div class="col-lg-6 col-sm-12 col-12" >
-        <img src="${data.thumbnail}" alt="${data.title}" />
+        <img class="detail-img" src="${data.thumbnail}" alt="${data.title}" />
       </div>
       <div class="col-lg-6 col-sm-12 col-12">
        <div class="content-product">
@@ -133,31 +125,22 @@ function renderDetail(target, data) {
             <div><p><span style="font-weight: 600;">Còn:</span> ${
               data.stock
             } sản phẩm</p></div>
-            <div class="total">         
-             <span>CHỌN SỐ LƯỢNG</span>
-             <div class="quantity-control">
-             <button class="left">-</button>
-             <span class="quantity">1</span>
-             <button class="right">+</button>
-            </div>
-            </div>
              </div>
             <div class="buy">
               <button class="buy-cart">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span>Thêm giỏ hàng</span>
+                <span><a class="add-product" href="#!">Thêm giỏ hàng</a></span>
               </button>
               <button class="buy-bag">
                 <i class="fa-solid fa-bag-shopping"></i>
-                <span>Mua ngay</span>
+                <span><a href="../cart.html">Mua ngay</a></span>
               </button>
             </div>
             <div class="market-product">
               <button class="market">
-                <p>Cửa hàng có sẵn sản phẩm</p>
+                <p><a href="../index.html">Cửa hàng có sẵn sản phẩm</a></p>
               </button>
             </div>
-            <div class="line-sub"></div>
             <div class="service">
               <div class="service-sub">
                 <img src="../img/Ship.png" alt="ship" />
@@ -219,7 +202,7 @@ function renderDetail(target, data) {
             <div class="review-right">
               <div class="review-right-body">
                 <p>Hình ảnh từ người mua</p>
-                <img src="${data.thumbnail}" alt="${
+                <img class="img-right" src="${data.thumbnail}" alt="${
     data.title
   }" style="width: 100px; height: 100px;" />
               </div>
@@ -252,32 +235,66 @@ function renderDetail(target, data) {
     </section>
   `;
   target.appendChild(productItem);
-
-  //Thực hiện tính số lượng
-  const quantityElement = productItem.querySelector(".quantity");
-  const left = productItem.querySelector(".left");
-  const right = productItem.querySelector(".right");
-  let quantity = 1;
-
-  function updateQuantity() {
-    quantityElement.textContent = quantity;
-  }
-
-  right.addEventListener("click", () => {
-    if (quantity < data.stock) {
-      quantity++;
-      updateQuantity();
-    }
+  //  add product
+  productItem.querySelector(".add-product").addEventListener("click", () => {
+    addProduct(data.id, data.category);
   });
-
-  left.addEventListener("click", () => {
-    if (quantity > 1) {
-      quantity--;
-      updateQuantity();
-    }
-  });
-
-  updateQuantity();
 }
 
 renderDetail(detailEle, product);
+
+// Hàm thêm sản phẩm vào giỏ hàng
+const addProduct = async (id, category) => {
+  const data = await getData(category);
+  const products = data.products;
+  const allProduct = products.find((product) => product.id === id);
+
+  if (!allProduct) {
+    alert("Sản phẩm không tồn tại.");
+    return;
+  }
+  const productsStock = allProduct.stock;
+
+  const cartProduct = cartList.find((data) => data.product.id === id);
+
+  if (cartProduct) {
+    if (cartProduct.quantity < productsStock) {
+      cartProduct.quantity += 1;
+    } else {
+      alert("Sản phẩm đã đạt đến giới hạn số lượng trong kho.");
+      return;
+    }
+  } else {
+    cartList.push({
+      product: allProduct,
+      quantity: 1,
+    });
+  }
+
+  // Lưu giỏ hàng vào localStorage
+  localStorage.setItem("cartList", JSON.stringify(cartList));
+  console.log("Sản phẩm đã được thêm vào giỏ hàng: ", cartList);
+  alert("Sản phẩm đã được thêm vào giỏ hàng: " + allProduct.title);
+};
+
+//Nam nữ dropdown
+const toggleWomen = document.getElementById("toggleWomen");
+const toggleMen = document.getElementById("toggleMen");
+const dropdownWomen = document.getElementById("dropdownWomen");
+const dropdownMen = document.getElementById("dropdownMen");
+
+function toggleDropdown(checkbox, dropdown) {
+  if (checkbox.checked) {
+    dropdown.style.display = "block";
+  } else {
+    dropdown.style.display = "none";
+  }
+}
+
+toggleWomen.addEventListener("change", function () {
+  toggleDropdown(toggleWomen, dropdownWomen);
+});
+
+toggleMen.addEventListener("change", function () {
+  toggleDropdown(toggleMen, dropdownMen);
+});
