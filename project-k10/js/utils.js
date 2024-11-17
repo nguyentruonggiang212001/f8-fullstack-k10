@@ -13,7 +13,7 @@ export function render(target, datas) {
           <a href='./product-detail.html?id=${item.id}'><img src="${item.thumbnail}" alt="${item.title}" /></a>
           <div class="product-infor">
             <h2 ><a href='./product-detail.html?id=${item.id}'>${item.title}</a></h2>
-            <div>Giá: ${item.price}</div>
+            <div>Giá: ${item.price}$</div>
             <p>Mô tả: ${item.description}</p>
             <p>Danh mục: ${item.category}</p>
             <button><a href='./product-detail.html?id=${item.id}'>Xem chi tiết</a></button>
